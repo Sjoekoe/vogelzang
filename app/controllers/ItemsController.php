@@ -60,12 +60,12 @@ class ItemsController extends \BaseController {
 
 			if (!empty($image)) {
 				$extension = $image->getClientOriginalExtension();
-				$path = 'uploads/items/'.$item->id;
+				$path = '/uploads/items/'.$item->id;
 				$filename = str_random(12);
 				// Input::file('image')->move('public/'.$path, $filename.'.'.$extension);
-				$pathToFile = 'public/'.$path.'/'.$filename.'.'.$extension;
+				$pathToFile = public_path().$path.'/'.$filename.'.'.$extension;
 
-					File::makeDirectory('public/'.$path);
+					File::makeDirectory(public_path().$path);
 					Image::make($image->getrealpath())->resize(null, 870, function($constraints) {
 						$constraints->aspectRatio();
 					} )->save($pathToFile);
@@ -164,9 +164,9 @@ class ItemsController extends \BaseController {
 
 				
 				if ($saved_picture) {
-					File::delete('public/'.$saved_picture->path);
+					File::delete(public_path().$saved_picture->path);
 					$saved_picture->delete();
-					rmdir('public/uploads/items/'.$item->id);
+					rmdir(public_path().'/uploads/items/'.$item->id);
 				}
 
 				// Create a new picture
@@ -174,10 +174,10 @@ class ItemsController extends \BaseController {
 				$path = 'uploads/items/'.$item->id;
 				$filename = str_random(12);
 				// Input::file('image')->move('public/'.$path, $filename.'.'.$extension);
-				$pathToFile = 'public/'.$path.'/'.$filename.'.'.$extension;
+				$pathToFile = public_path().$path.'/'.$filename.'.'.$extension;
 
-					if(!file_exists('public/'.$path)) {
-						File::makeDirectory('public/'.$path);
+					if(!file_exists(public_path().$path)) {
+						File::makeDirectory(public_path().$path);
 					}
 					// File::makeDirectory('public/'.$path);
 					Image::make(Input::file('image')->getrealpath())->resize(null, 870, function($constraints) {
@@ -212,10 +212,10 @@ class ItemsController extends \BaseController {
 		$photo = Item::find($id)->itemphoto;
 
 		if (!empty($photo)) {
-			File::delete('public/'.$photo->path);
+			File::delete(public_path().$photo->path);
 			$photo->delete();
 			
-			rmdir('public/uploads/items/'.$item->id);
+			rmdir(public_path().'/uploads/items/'.$item->id);
 		}
 
 		if ($item->delete()) {
@@ -230,8 +230,8 @@ class ItemsController extends \BaseController {
 		$item_id = $photo->item_id;
 
 		if(!empty($photo)) {
-			File::delete('public/'.$photo->path);
-			rmdir('public/uploads/items/'.$item_id);
+			File::delete(public_path().$photo->path);
+			rmdir(public_path().'/uploads/items/'.$item_id);
 			if($photo->delete()) {
 				return Redirect::route('items.edit', $item_id)->with('global', 'de foto is verwijderd');
 			}

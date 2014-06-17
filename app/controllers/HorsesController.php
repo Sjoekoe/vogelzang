@@ -171,9 +171,9 @@ class HorsesController extends \BaseController {
 			foreach ($files as $file) {
 				if (!empty($file)) {
 					$extension = $file->getClientOriginalExtension();
-					$path = 'uploads/horses/'.$horse->id;
+					$path = '/uploads/horses/'.$horse->id;
 					$filename = str_random(12);
-					$pathToFile = 'public/'.$path.'/'.$filename.'.'.$extension;
+					$pathToFile = public_path().$path.'/'.$filename.'.'.$extension;
 
 					// File::makeDirectory('public/'.$path);
 					Image::make($file->getrealpath())->resize(null, 870, function($constraints) {
@@ -211,10 +211,10 @@ class HorsesController extends \BaseController {
 		$files = Horse::find($id)->horsepicture;
 		if ($files->count()) {
 			foreach ($files as $file) {
-				File::delete('public/'.$file->path);
+				File::delete(public_path().$file->path);
 				$file->delete();
 			}
-			rmdir('public/uploads/horses/'.$horse->id);
+			rmdir(public_path().'/uploads/horses/'.$horse->id);
 		}
 		
 		if($horse->delete()) {
@@ -228,7 +228,7 @@ class HorsesController extends \BaseController {
 		$horse_id = $photo->horse_id;
 
 		if (!empty($photo)) {
-			File::delete('public/'.$photo->path);
+			File::delete(public_path().$photo->path);
 			if ($photo->delete()) {
 				return Redirect::route('horses.edit', $horse_id)->with('global', 'De foto is verwijderd');
 			}
