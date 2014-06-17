@@ -171,7 +171,7 @@ class ItemsController extends \BaseController {
 
 				// Create a new picture
 				$extension = $image->getClientOriginalExtension();
-				$path = 'uploads/items/'.$item->id;
+				$path = '/uploads/items/'.$item->id;
 				$filename = str_random(12);
 				// Input::file('image')->move('public/'.$path, $filename.'.'.$extension);
 				$pathToFile = public_path().$path.'/'.$filename.'.'.$extension;
