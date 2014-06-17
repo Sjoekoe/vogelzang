@@ -66,12 +66,12 @@ class HorsesController extends \BaseController {
 					return Redirect::route('horses.edit', $horse->id)->with('global', 'gelieve nog minstens 1 foto toe te voegen');
 				} else {
 					$extension = $file->getClientOriginalExtension();
-					$path = 'uploads/horses/'.$horse->id;
+					$path = '/uploads/horses/'.$horse->id;
 					$filename = str_random(12);
-					$pathToFile = 'htdocs/public/'.$path.'/'.$filename.'.'.$extension;
+					$pathToFile = public_path().$path.'/'.$filename.'.'.$extension;
 
-					if(!file_exists('htdocs/public/'.$path)) {
-						File::makeDirectory('htdocs/public/'.$path);
+					if(!file_exists(public_path().$path)) {
+						File::makeDirectory(public_path().$path);
 					}
 
 					// File::makeDirectory('public/'.$path);
