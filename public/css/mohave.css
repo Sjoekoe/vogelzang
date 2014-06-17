@@ -1,0 +1,21 @@
+@font-face {
+	font-family: Mohave;
+	src: url('../fonts/Mohave.otf') format("opentype");
+}
+
+@font-face {
+	font-family: Mohave;
+	font-family: bold;
+	src: url('../fonts/Mohave-Bold.otf') format("opentype");
+}
+
+@font-face {
+	font-family: Mohave;
+	font-family: italic;
+	src: url('../fonts/Mohave.otf Italics') format("opentype");
+}
+
+@font-face {
+	font-family: Lovelo;
+	src: url('../fonts/Lovelo Black.otf') format("opentype");
+}
