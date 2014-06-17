@@ -68,10 +68,10 @@ class HorsesController extends \BaseController {
 					$extension = $file->getClientOriginalExtension();
 					$path = 'uploads/horses/'.$horse->id;
 					$filename = str_random(12);
-					$pathToFile = 'htdocs/public/'.$path.'/'.$filename.'.'.$extension;
+					$pathToFile = 'public/'.$path.'/'.$filename.'.'.$extension;
 
-					if(!file_exists('htdocs/public/'.$path)) {
-						File::makeDirectory('htdocs/public/'.$path);
+					if(!file_exists('public/'.$path)) {
+						File::makeDirectory('public/'.$path);
 					}
 
 					// File::makeDirectory('public/'.$path);
