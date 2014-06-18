@@ -8,7 +8,7 @@
 				@if (!$items->count())
 					<p>Er zijn geen berichten gevonden</p>
 				@else
-				<div class="col-md-8 ">
+				<div class="col-md-8 col-sm-12">
 					@foreach ($items as $item)						
 						<a href=" {{ URL::route('items.show', $item->id) }} ">
 						
@@ -22,7 +22,7 @@
 					</div>					
 				</div>	
 					<div class="col-md-4 leftborder">
-						<div class="thumbnail salethumb pumpkin">
+						<div class="thumbnail salethumb noshow pumpkin">
 							{{ HTML::image('images/news2.jpg') }}
 						</div>
 						<br>

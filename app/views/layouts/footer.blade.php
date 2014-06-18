@@ -7,8 +7,8 @@
 						<strong>Stal de Vogelzang</strong> <br>
 						Vogelzangstraat 12 ,
 						9160 Lokeren <br>
-						+32 (0) 475.29.57.60 <br>
-						<a href="mailto:#">info@staldevogelzang.be</a>
+						<a href="tel:+32475295760"> +32 (0) 475.29.57.60 <br>
+						<a href="mailto:info@staldevogelzang.be">info@staldevogelzang.be</a>
 					</address>
 				</div>
 			</div>

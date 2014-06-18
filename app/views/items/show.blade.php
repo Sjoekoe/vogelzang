@@ -5,7 +5,7 @@
 		<div class="container">
 			<h2> {{ $item->title }} </h2>
 			<div class="row">
-				<div class="col-md-8 salecontent">
+				<div class="col-md-8 col-sm-12 salecontent">
 					<div class="row">
 						<p class="small"> {{ nl2br($item->message) }} </p>	
 					</div>
@@ -16,7 +16,7 @@
 					
 				</div>
 				<div class="col-md-4 leftborder">
-					<div class="thumbnail salethumb pumpkin">
+					<div class="thumbnail salethumb noshow pumpkin">
 						@if ($item->itemphoto()->count())
 							<div class="slider">
 								<ul id="wrapper">

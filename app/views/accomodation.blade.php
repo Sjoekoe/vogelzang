@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="thumbnail salethumb turquoise">
+					<div class="thumbnail salethumb noshow turquoise">
 						<div class="slider">
 							<ul id="wrapper">
 								<li>

@@ -57,23 +57,23 @@
 								</div>
 							</div> <!-- End col-md-10 -->
 						{{ Form::close() }}
-						<div class="col-md-3">
+						<div class="col-md-3 col-sm-6">
 							<div class="contact-data ">
-								<div class="address">
+								<div class="address col-sm-4">
 									<h4>Adres</h4>
 									<p>Vogelzangstraat 12 <br>
 										9160 Lokeren</p>
 								</div> <!-- End address -->
-								<div class="phone">
+								<div class="phone col-sm-4">
 									<h4>Telefoon</h4>
-									<p>+32 (0) 475.29.57.60</p>
-									<p>+32 (0) 476.88.11.84</p>
+									<p><a href="tel:+32475295760"> +32 (0) 475.29.57.60</a></p>
+									<p><a href="tel:+32476881184"> +32 (0) 476.88.11.84</a></p>
 								</div> <!-- End phone -->
-								<div class="mail">
+								<div class="mail col-sm-4">
 									<h4>Mail</h4>
-									<p>info@staldevogelzang.be</p>
+									<p><a href="mailto:info@staldevogelzang.be"> info@staldevogelzang.be</a></p>
 								</div> <!-- End mail -->
-								<div class="Social media">
+								<div class="Social media col-sm-4">
 									<h4>Volg ons</h4>
 									<p> <a href="https://www.facebook.com/groups/180597618657465/">Facebook</a> </p>
 								</div> <!-- End social media -->
@@ -81,7 +81,7 @@
 						</div> <!-- End col-md 2 -->						
 					</div> <!-- End col-md-10 rightborder -->
 					<div class="col-md-4">
-						<div class="thumbnail salethumb purple">
+						<div class="thumbnail salethumb noshow purple">
 							{{ HTML::image('images/contact2.jpg') }}
 						</div>
 					</div> <!-- End col-md-2 -->

@@ -15,7 +15,7 @@
 					<p class="small">Recentelijk hebben ze nog vernieuwingen aangebracht, en is er een grote binnenpiste gebouwd met ruime stallen.</p> <br>
 				</div>
 				<div class="col-md-4 col-sm-6 ">
-					<div class="thumbnail salethumb sunflower">
+					<div class="thumbnail salethumb noshow sunflower">
 						{{ HTML::image('images/about.png') }}
 					</div>
 				</div>

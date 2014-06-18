@@ -5,40 +5,40 @@
 		<div class="container">
 			<h2>{{ $horse->name }}</h2>
 			<div class="row">
-				<div class="col-md-8">
-					<div class="col-md-2">
+				<div class="col-md-8 col-sm-12">
+					<div class="col-md-2 col-sm-2">
 						<p class="flr">Ras</p>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10 col-sm-10">
 						<p>{{ $horse->breed }}</p>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-2">
 						<p class="flr">Geslacht</p>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10 col-sm-10">
 						<p>{{ $horse->gender->gender }}</p>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-2">
 						<p class="flr">Leeftijd</p>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10 col-sm-10">
 						<p>{{ $horse->age }}</p>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-2">
 						<p class="flr">Prijsklasse</p>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10 col-sm-10">
 						<p>{{ $horse->price->price }}</p>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-2">
 						<p class="flr">Omschrijving</p>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10 col-sm-10">
 						<p>{{ nl2br($horse->description) }}</p>
 					</div>
 				</div>
 				<div class="col-md-4 leftborder">
-					<div class="thumbnail salethumb pomegranate">
+					<div class="thumbnail salethumb noshow pomegranate">
 						<div class="slider">
 							<ul id="wrapper">
 								@foreach ($horse->horsepicture as $picture)
