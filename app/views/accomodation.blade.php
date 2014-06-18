@@ -56,8 +56,8 @@
 									</a>
 								</li>
 								<li>
-									<a href=" {{ URL::to('images/accomodation/stal.jpg') }} " rel="gallery" title="stal" class="lightbox">
-										{{ HTML::image('images/accomodation/stal.jpg') }}
+									<a href=" {{ URL::to('images/accomodation/Stal.jpg') }} " rel="gallery" title="stal" class="lightbox">
+										{{ HTML::image('images/accomodation/Stal.jpg') }}
 									</a>
 								</li>
 								<li>
