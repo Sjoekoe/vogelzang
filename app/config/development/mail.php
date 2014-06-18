@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'info@staldevogelzang.be', 'name' => 'Stal de Vogelzang'),
+	'from' => array('address' => 'jonckershans@gmail.com', 'name' => 'Stal de Vogelzang'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'staldevogelzang@gmail.com',
+	'username' => 'jonckershans@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'jcunsqezofugohmp',
+	'password' => 'Rafc1880',
 
 	/*
 	|--------------------------------------------------------------------------
