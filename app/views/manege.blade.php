@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-md-8 rightborder">
 					<div class="col-md-6 rightborder">
-						<h3 class="underlined">RijLessen</h3>
+						<h3 class="underlined">Rijlessen</h3>
 						<p class="small">Op woensdagmiddag, vrijdagavond en zaterdag geven wij groepslessen op verschillende niveaus, van beginneling tot gevorderde, <br> van jong tot oud. <br>
 						De lessen worden gegeven door onze eigen ervaren lesgevers. </p>
 						<p class="small">Natuurlijk bestaat er ook de mogelijkheid tot het nemen van privelessen met een van onze lesgevers. <br>
