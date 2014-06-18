@@ -60,12 +60,12 @@ class ContactsController extends \BaseController {
 					'subject' 	=> $subject,
 					'email'		=> $email
 				), function($message) use ($contact) {
-					$message->to('jonckershans@gmail.com', 'Admin')->subject('U hebt een nieuw bericht vanop de site.');
+					$message->to('info@staldevogelzang.be', 'Automailer')->subject('U hebt een nieuw bericht vanop de site.');
 				});
 
 				return Redirect::route('contacts.create')->with('global', 'uw bericht is verzonden. We nemen zo spoedig mogelijk contact op met u');
 			} else {
-				return Redirect::route('contacts.create')->with('global', 'Uw berich kon niet worden verzonden.');
+				return Redirect::route('contacts.create')->with('global', 'Uw bericht kon niet worden verzonden.');
 			}
 		}
 
