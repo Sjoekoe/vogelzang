@@ -3,10 +3,10 @@
 		<ul class="pull-left">
 			<li> <a href=" {{ URL::route('home') }}">Home</a> </li>
 			<li> <a href=" {{ URL::route('home.about') }} ">Over ons</a> </li>
-			<li> <a href=" {{ URL::route('home.accomodation') }} ">Accomodatie</a> </li>
-			<li> <a href=" {{ URL::route('home.manege') }} ">Manege</a> </li>
 			<li> <a href=" {{ URL::route('items.index') }} ">Nieuws</a> </li>
 			<li> <a href=" {{ URL::route('horses.index') }} ">Te koop</a> </li>
+			<li> <a href=" {{ URL::route('home.accomodation') }} ">Accomodatie</a> </li>
+			<li> <a href=" {{ URL::route('home.manege') }} ">Manege</a> </li>
 			<li> <a href=" {{ URL::route('contacts.create') }} ">Contact</a> </li>
 		</ul>
 		<ul class="pull-right">
@@ -22,28 +22,3 @@
 		</ul>
 	</div> <!-- End container -->
 </div> <!-- End Nav -->
-
-
-
-
-
-
-<!-- <nav>
-	
-
-
-
-
-
-	<ul>
-		
-		@if (Auth::check())
-			
-			<li> <a href=" {{ URL::route('user.edit') }} ">Update profiel</a> </li>
-			<li> <a href=" {{ URL::route('user.edit.password') }} ">Wachtwoord wijzigen</a> </li>
-		@else
-			
-			<li> <a href=" {{ URL::route('user.recover-password') }} "> Wachtwoord vergeten </a> </li>
-		@endif
-	</ul>
-</nav> -->

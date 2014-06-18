@@ -7,8 +7,8 @@
 			<div class="row">
 				<div class="col-md-8 rightborder">
 					<div class="col-md-6 rightborder">
-						<h3 class="underlined">rijLessen</h3>
-						<p class="small">op woensdagmiddag, vrijdagavond en zaterdag geven wij groepslessen op verschillende niveaus, van beginneling tot gevorderde. <br> Van Jong tot oud. <br>
+						<h3 class="underlined">RijLessen</h3>
+						<p class="small">Op woensdagmiddag, vrijdagavond en zaterdag geven wij groepslessen op verschillende niveaus, van beginneling tot gevorderde, <br> van jong tot oud. <br>
 						De lessen worden gegeven door onze eigen ervaren lesgevers. </p>
 						<p class="small">Natuurlijk bestaat er ook de mogelijkheid tot het nemen van privelessen met een van onze lesgevers. <br>
 						 <br>
@@ -30,12 +30,12 @@
 						</ul>
 					</div>					
 					<div class="col-md-6 nopadright">
-						<h3 class="underlined">ponykampen</h3>
-						<p class="small">tijdens de schoolvakanties organiseren wij in samenwerking met de stad lokeren ponykampen. <br>
-						 de duur van de kampen varieert van 2 dagen tot een hele week, waar er tal van activiteiten gepland staan voor de deelnemers.
+						<h3 class="underlined">Ponykampen</h3>
+						<p class="small">Tijdens de schoolvakanties organiseren wij in samenwerking met de stad lokeren ponykampen. <br>
+						 De duur van de kampen varieert van 2 dagen tot een hele week, waar er tal van activiteiten gepland staan voor de deelnemers.
 							Er bestaat ook de mogelijkheid om te overnachten, en ook eten is voorzien.</p>
-						<p class="small">de plaatsen voor deze kampen zijn beperkt, dus snel zijn is de boodschap. <br> 
-							contacteer ons om in te schrijven, of kom gerust eens langs.</p> <br>
+						<p class="small">De plaatsen voor deze kampen zijn beperkt, dus snel zijn is de boodschap. <br> 
+							Contacteer ons om in te schrijven, of kom gerust eens langs.</p> <br>
 						<h3 class="underlined">Data</h3>
 						<ul class="accomodation">
 							<li>30 juni - 4 juli</li>

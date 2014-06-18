@@ -12,16 +12,17 @@
 							<li>+/- 50 verluchte binnenstallen</li>
 							<li>5 buitenstallen</li>
 							<li>4 grote loopstallen</li>
+							<li>Automatische drinkbakken</li>
 							<li>Stofvrije binnenpiste</li>
-							<li>verlichte Buitenpiste</li>
+							<li>Verlichte Buitenpiste</li>
 							<li>2 wasplaatsen met warm &amp; koud water</li>
-							<li>solarium</li>
+							<li>Solarium</li>
 							<li>Paddock</li>
-							<li>longeerpiste</li>
+							<li>Longeerpiste</li>
 							<li>Verschillende ruime weides in de omgeving</li>
 							<li>Voldoende springmateriaal</li>
 							<li>Wandelroutes</li>		
-							<li>parking</li>
+							<li>Parking</li>
 							<li>Verwarmde Cafetaria</li>
 							<li>Sanitaire voorzieningen </li>
 						</ul>
@@ -33,7 +34,7 @@
 						<ul class="accomodation">
 							<li>Onbeperkt gebruik faciliteiten</li>
 							<li>Dagelijks vers hooi</li>
-							<li>uitmesten van stallen</li>
+							<li>Uitmesten van stallen</li>
 							<li>Dagelijkse Weidegang</li>
 							<li>Persoonlijke opbergkast</li>
 							<li>Begeleiden van veearts/hoefsmid</li>
@@ -51,7 +52,7 @@
 									</a>
 								</li>
 								<li>
-									<a href=" {{ URL::to('images/accomodation/stalpaard.jpg') }} " rel="gallery" title="stalpaard" class="lightbox">
+									<a href=" {{ URL::to('images/accomodation/stalpaard.jpg') }} " rel="gallery" title="stal met paard" class="lightbox">
 										{{ HTML::image('images/accomodation/stalpaard.jpg') }}
 									</a>
 								</li>
@@ -61,7 +62,7 @@
 									</a>
 								</li>
 								<li>
-									<a href=" {{ URL::to('images/accomodation/spring.jpg') }} " rel="gallery" title="spring" class="lightbox">
+									<a href=" {{ URL::to('images/accomodation/spring.jpg') }} " rel="gallery" title="springmateriaal" class="lightbox">
 										{{ HTML::image('images/accomodation/spring.jpg') }}
 									</a>
 								</li>
