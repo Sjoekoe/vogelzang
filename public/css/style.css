@@ -100,7 +100,7 @@ p.small {
 	padding:15px;
 	padding-bottom: 0;
 	max-height: 580px;
-	overflow: scroll;
+	/*overflow: scroll;*/
 }
 
 
