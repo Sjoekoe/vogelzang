@@ -60,7 +60,7 @@ class ContactsController extends \BaseController {
 					'subject' 	=> $subject,
 					'email'		=> $email
 				), function($message) use ($contact) {
-					$message->to('info@staldevogelzang.be', 'Automailer')->subject('U hebt een nieuw bericht vanop de site.');
+					$message->to('info@staldevogelzang.be', 'Peter')->subject('U hebt een nieuw bericht vanop de site.');
 				});
 
 				return Redirect::route('contacts.create')->with('global', 'uw bericht is verzonden. We nemen zo spoedig mogelijk contact op met u');

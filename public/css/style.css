@@ -23,6 +23,15 @@ button {
 	outline: none;
 }
 
+/*.nav {
+	position: fixed;
+}
+
+.nav .container{
+	position: relative;
+	background: #fff;
+}*/
+
 .nav a{
 	color: #5a5a5a;
 	font-size: 11px;
@@ -90,6 +99,8 @@ p.small {
 	border-radius: 5px;
 	padding:15px;
 	padding-bottom: 0;
+	max-height: 565px;
+	overflow: scroll;
 }
 
 
