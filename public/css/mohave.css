@@ -22,8 +22,8 @@
 
 @font-face { 
 	font-family: 'Mohave'; 
-	/*src: url('font/path/mohave.eot');*/
-	src: url('font/path/mohave.eot?#iefix') format('embedded-opentype'), url('font/path/mohave.svg#Mohave') format('svg'), url('font/path/mohave.woff') format('woff'), url('font/path/mohave.ttf') format('truetype'); 
+	src: url('font/path/mohave.eot?#iefix') format('embedded-opentype');
+	/*src: url('font/path/mohave.eot?#iefix') format('embedded-opentype'), url('font/path/mohave.svg#Mohave') format('svg'), url('font/path/mohave.woff') format('woff'), url('font/path/mohave.ttf') format('truetype'); */
 	font-weight: normal; 
 	font-style: normal;
 }
