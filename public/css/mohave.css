@@ -1,18 +1,73 @@
 @font-face {
-	font-family: Mohave;
-	src: url('../fonts/Mohave.otf') format("opentype");
+    font-family: 'mohaveitalic';
+    src: url('../fonts/mohave_italics-webfont.eot');
+    src: url('../fonts/mohave_italics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mohave_italics-webfont.woff') format('woff'),
+         url('../fonts/mohave_italics-webfont.ttf') format('truetype'),
+         url('../fonts/mohave_italics-webfont.svg#mohaveitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
-@font-face {
-	font-family: Mohave;
-	font-family: bold;
-	src: url('../fonts/Mohave-Bold.otf') format("opentype");
-}
+
+
 
 @font-face {
-	font-family: Mohave;
-	font-family: italic;
-	src: url('../fonts/Mohave.otf Italics') format("opentype");
+    font-family: 'mohavesemibold_italic';
+    src: url('../fonts/mohave-semibold_italics-webfont.eot');
+    src: url('../fonts/mohave-semibold_italics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mohave-semibold_italics-webfont.woff') format('woff'),
+         url('../fonts/mohave-semibold_italics-webfont.ttf') format('truetype'),
+         url('../fonts/mohave-semibold_italics-webfont.svg#mohavesemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mohavebold';
+    src: url('../fonts/mohave-bold-webfont.eot');
+    src: url('../fonts/mohave-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mohave-bold-webfont.woff') format('woff'),
+         url('../fonts/mohave-bold-webfont.ttf') format('truetype'),
+         url('../fonts/mohave-bold-webfont.svg#mohavebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mohavebold_italic';
+    src: url('../fonts/mohave-bold_italics-webfont.eot');
+    src: url('../fonts/mohave-bold_italics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mohave-bold_italics-webfont.woff') format('woff'),
+         url('../fonts/mohave-bold_italics-webfont.ttf') format('truetype'),
+         url('../fonts/mohave-bold_italics-webfont.svg#mohavebold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mohavesemibold';
+    src: url('../fonts/mohave-semibold-webfont.eot');
+    src: url('../fonts/mohave-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('m../fonts/ohave-semibold-webfont.woff') format('woff'),
+         url('../fonts/mohave-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/mohave-semibold-webfont.svg#mohavesemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {

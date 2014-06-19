@@ -69,7 +69,7 @@ button {
 	color: #31C3D9;
 	font-size: 48px;
 	font-weight: bold;
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 }
 
 .jumbotron a:visited h1{
@@ -80,7 +80,7 @@ button {
 .jumbotron p {
 	color: #31C3D9;
 	font-size: 20px;
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	letter-spacing: 0.6px;
 }
 
@@ -106,7 +106,7 @@ p.small {
 
 
 .content h3 {
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	font-size: 18px;
 	text-align: center;
 	color: #fff;
@@ -117,7 +117,7 @@ p.small {
 }
 
 .contact {
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	border-radius: 5px;
 	padding: 15px;
 	padding-bottom: 35px;
@@ -216,7 +216,7 @@ form input[type=text]:focus, form textarea:focus {
 }
 
 .sale {
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	border-radius: 5px;
 	padding: 15px;
 	padding-bottom: 15px;
@@ -234,7 +234,7 @@ form input[type=text]:focus, form textarea:focus {
 }
 
 .sale h3 {
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	font-size: 18px;
 	text-align: center;
 	color: #fff;
@@ -307,13 +307,13 @@ h2.noborder {
 .pager {
 	margin: auto;
 	color: #fff;
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	font-size: 20px;
 	padding-bottom: 15px;
 }
 
 .pager li {
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 }
 
 .pager li > a,
@@ -350,7 +350,7 @@ h2.noborder {
 }
 
 .round {
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	font-size: 20px;
 	padding: 12px 14px;
 	border-radius: 100%;
@@ -419,7 +419,7 @@ h2.noborder {
 #slider-nav button {
 	cursor: pointer;
 	color: #fff;
-	font-family: 'Mohave', sans-serif;
+	font-family: 'mohavesemibold', sans-serif;
 	font-size: 20px;
 	padding: 5px 14px;
 }
