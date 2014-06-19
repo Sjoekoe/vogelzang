@@ -15,7 +15,7 @@
 					</div>
 					
 				</div>
-				<div class="col-md-4 leftborder">
+				<div class="col-md-4 col-sm-6 marginleft leftborder clearfix">
 					<div class="thumbnail salethumb noshow pumpkin">
 						@if ($item->itemphoto()->count())
 							<div class="slider">

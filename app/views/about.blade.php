@@ -5,7 +5,7 @@
 		<div class="container">
 			<h2>Over ons</h2>
 			<div class="row">
-				<div class="col-md-8 col-sm-6 rightborder">
+				<div class="col-md-8 col-sm-6 rightborder rbshow">
 					<p class="small">De opzetters van Stal de Vogelzang - Peter Wauters &amp; Kenny Bosman - waren van kleins af aan actief in de paardensport. <br>
 					Bij de LRV en op allerlei paardenmarkten waren ze dan ook vaak geziene gezichten. </p>
 					<p class="small">In 2002 besloten Peter &amp; Kenny om samen te gaan wonen, en zo kregen ze ook de mogelijkheid om hun hobby en interesse uit te breiden.</p>

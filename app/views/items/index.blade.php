@@ -17,14 +17,17 @@
 							<!-- <small class="">Gepost door: {{ $item->user->username }} </small> -->
 						</a>						
 					@endforeach					
-					<div class="col-md-12">
+					<div class="col-md-12 col-sm-12">
 						{{$items->links()}}
 					</div>					
 				</div>	
-					<div class="col-md-4 leftborder">
-						<div class="thumbnail salethumb noshow pumpkin">
-							{{ HTML::image('images/news2.jpg') }}
+					<div class="col-md-4 col-sm-6 marginleft">
+						<div class="leftborder">
+							<div class="thumbnail salethumb noshow pumpkin">
+								{{ HTML::image('images/news2.jpg') }}
+							</div>
 						</div>
+							
 						<br>
 					</div>
 				@endif

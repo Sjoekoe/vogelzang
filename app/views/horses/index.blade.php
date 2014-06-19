@@ -11,7 +11,7 @@
 				</div>
 				@foreach ($horses as $horse)
 					@if ($horse->horsepicture->count())
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-6">
 							<a href=" {{ URL::route('horses.show', $horse->id) }} ">
 								<div class="thumbnail salethumb pomegranate">
 									{{ HTML::image($horse->horsepicture->first()->path,'', array('class' => 'img-responsive')) }}

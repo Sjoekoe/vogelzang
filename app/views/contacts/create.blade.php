@@ -8,9 +8,9 @@
 				@if (Session::has('global'))
 					<p class="global centered"> {{ Session::get('global') }} </p>
 				@else
-					<div class="col-md-8 rightborder">
+					<div class="col-md-8 col-sm-12 rightborder">
 						{{ Form::open(array('class' => 'form-horizontal', 'role' => 'form')) }}
-							<div class="col-md-9 rightborder">							
+							<div class="col-md-9 col-sm-12 rightborder">							
 								<div class="form-group">
 									{{ Form::label('full_name', 'naam: ', array('class' => 'col-sm-2 control-label')) }}
 									<div class="col-sm-10">
@@ -57,30 +57,30 @@
 								</div>
 							</div> <!-- End col-md-10 -->
 						{{ Form::close() }}
-						<div class="col-md-3 col-sm-6">
-							<div class="contact-data ">
-								<div class="address col-sm-4">
+						<div class="col-md-3 col-sm-12">
+							<div class="contact-data  ">
+								<div class="address col-md-12 col-sm-3">
 									<h4>Adres</h4>
 									<p>Vogelzangstraat 12 <br>
 										9160 Lokeren</p>
 								</div> <!-- End address -->
-								<div class="phone col-sm-4">
+								<div class="phone col-md-12 col-sm-3">
 									<h4>Telefoon</h4>
 									<p><a href="tel:+32475295760"> +32 (0) 475.29.57.60</a></p>
 									<p><a href="tel:+32476881184"> +32 (0) 476.88.11.84</a></p>
 								</div> <!-- End phone -->
-								<div class="mail col-sm-4">
+								<div class="mail col-md-12 col-sm-3">
 									<h4>Mail</h4>
 									<p><a href="mailto:info@staldevogelzang.be"> info@staldevogelzang.be</a></p>
 								</div> <!-- End mail -->
-								<div class="Social media col-sm-4">
+								<div class="Socialmedia col-md-12 col-sm-3">
 									<h4>Volg ons</h4>
 									<p> <a href="https://www.facebook.com/groups/180597618657465/">Facebook</a> </p>
 								</div> <!-- End social media -->
 							</div> <!-- End contact-data -->							
 						</div> <!-- End col-md 2 -->						
 					</div> <!-- End col-md-10 rightborder -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-6 marginleft">
 						<div class="thumbnail salethumb noshow purple">
 							{{ HTML::image('images/contact2.jpg') }}
 						</div>

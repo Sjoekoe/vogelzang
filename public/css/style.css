@@ -221,7 +221,7 @@ form input[type=text]:focus, form textarea:focus {
 	padding: 15px;
 	padding-bottom: 15px;
 	/*max-height: 550px;*/
-	max-height: 580px;
+	max-height: 700px;
 	overflow: auto;
 }
 
@@ -276,7 +276,7 @@ ul.accomodation li {
 	margin: 0 auto;
 }
 
-.col-md-4.leftborder {
+.leftborder {
 	border-left: 1px dashed #fff;
 	float: right;
 	padding-left: 25px;
@@ -685,9 +685,75 @@ address a {
 	.salethumb.noshow{
 		display: none;
 	}
-
-
+	.footer {
+		text-align: center;
+	}
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.rightborder {
+		border: none;
+	}
+
+
+
+	.rbshow {
+		border-right: 1px dashed #fff;
+	}
+
+	
+
+	
+
+	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
+	.marginleft {
+		margin-left: 25%;
+	}
+
+	.leftborder {
+		border: none;
+		float: none;
+	}
+	.salethumb {
+		margin-top: 15px;
+	}
+	
+	.contact-data {
+		border-top: 1px dashed #fff;
+		padding-top: 15px;
+	}
+
+	.contact-data .address, .contact-data .phone, .contact-data .mail  {
+	/*margin-bottom: 25px;*/
+	border-bottom: none;
+	/*border-right: 1px dashed #fff;*/
+	}
+
+	.flr {
+		float: none;
+	}
+
+	.mobilebottom {
+		border-bottom: 1px dashed #fff;
+		padding-bottom: 15px;
+	}
+}
+
+	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation:landscape) {
+	.rightborder {
+		border-right: 1px dashed #fff;
+	}
+
+	.leftborder {
+		border-left: 1px dashed #fff;
+		padding-left: 15px;
+	}
+}
 
 

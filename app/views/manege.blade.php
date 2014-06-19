@@ -6,7 +6,7 @@
 			<h2>Manege</h2>
 			<div class="row">
 				<div class="col-md-8 col-sm-12 rightborder">
-					<div class="col-md-6 rightborder">
+					<div class="col-md-6 col-sm-6 rightborder rbshow">
 						<h3 class="underlined">Rijlessen</h3>
 						<p class="small">Op woensdagmiddag, vrijdagavond en zaterdag geven wij groepslessen op verschillende niveaus, van beginneling tot gevorderde, <br> van jong tot oud. <br>
 						De lessen worden gegeven door onze eigen ervaren lesgevers. </p>
@@ -29,7 +29,7 @@
 							</li>
 						</ul>
 					</div>					
-					<div class="col-md-6 nopadright">
+					<div class="col-md-6 col-sm-6 nopadright">
 						<h3 class="underlined">Ponykampen</h3>
 						<p class="small">Tijdens de schoolvakanties organiseren wij in samenwerking met de stad lokeren ponykampen. <br>
 						 De duur van de kampen varieert van 2 dagen tot een hele week, waar er tal van activiteiten gepland staan voor de deelnemers.
@@ -44,7 +44,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 col-sm-offset-3">
+				<div class="col-md-4 col-sm-6 marginleft">
 					<div class="thumbnail salethumb noshow blue">
 						<div class="slider">
 							<ul id="wrapper">

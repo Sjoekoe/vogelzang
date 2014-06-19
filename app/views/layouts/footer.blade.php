@@ -1,7 +1,7 @@
 <div class="footer">
 	<div class="container">
 		<div class="row">			
-			<div class="col-md-4 col-md-offset-4">
+			<div class="col-sm-12 centered">
 				<div class="centered">
 					<address>
 						<strong>Stal de Vogelzang</strong> <br>
@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 col-sm-12">
 				<div class="centered">
 					<p>Copyright &copy; 2014 - {{ date("Y") }}  </p>
 				</div>
