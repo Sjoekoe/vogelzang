@@ -5,7 +5,7 @@
 		<div class="container">
 			<h2>Manege</h2>
 			<div class="row">
-				<div class="col-md-8 col-sm-12 rightborder">
+				<div class="col-md-8 col-sm-12 rightborder rbshow">
 					<div class="col-md-6 col-sm-6 rightborder rbshow">
 						<h3 class="underlined">Rijlessen</h3>
 						<p class="small">Op woensdagmiddag, vrijdagavond en zaterdag geven wij groepslessen op verschillende niveaus, van beginneling tot gevorderde, <br> van jong tot oud. <br>

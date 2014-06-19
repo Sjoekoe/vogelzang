@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 col-sm-6">
+			<div class="col-md-12 col-sm-6 marginleft centered">
 				<div class="centered">
 					<p>Copyright &copy; 2014 - {{ date("Y") }}  </p>
 				</div>

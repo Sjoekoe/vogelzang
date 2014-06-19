@@ -69,7 +69,12 @@ button {
 	color: #31C3D9;
 	font-size: 48px;
 	font-weight: bold;
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.jumbotron a p {
+	text-transform: uppercase;
 }
 
 .jumbotron a:visited h1{
@@ -80,8 +85,8 @@ button {
 .jumbotron p {
 	color: #31C3D9;
 	font-size: 20px;
-	font-family: 'mohavesemibold', sans-serif;
-	letter-spacing: 0.6px;
+	font-family: 'PT Sans', sans-serif;
+	/*letter-spacing: 0.6px;*/
 }
 
 h3.underlined {
@@ -106,10 +111,11 @@ p.small {
 
 
 .content h3 {
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
 	text-align: center;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 .content a {
@@ -117,7 +123,7 @@ p.small {
 }
 
 .contact {
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT-Sans', sans-serif;
 	border-radius: 5px;
 	padding: 15px;
 	padding-bottom: 35px;
@@ -207,7 +213,7 @@ form input[type=text]:focus, form textarea:focus {
 .contact-data p {
 	color: #fff;
 	font-size: 12px;
-	letter-spacing: 0.5px;
+	/*letter-spacing: 0.5px;*/
 }
 
 .contact-data .address, .contact-data .phone, .contact-data .mail  {
@@ -216,7 +222,7 @@ form input[type=text]:focus, form textarea:focus {
 }
 
 .sale {
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	border-radius: 5px;
 	padding: 15px;
 	padding-bottom: 15px;
@@ -234,10 +240,11 @@ form input[type=text]:focus, form textarea:focus {
 }
 
 .sale h3 {
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
 	text-align: center;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 .sale h2 {
@@ -248,6 +255,7 @@ form input[type=text]:focus, form textarea:focus {
 	border-bottom: 1px dashed #fff;
 	margin-bottom: 25px;
 	margin-top: 5px;
+	text-transform: uppercase;
 }
 
 .sale p {
@@ -258,8 +266,9 @@ form input[type=text]:focus, form textarea:focus {
 	color: #fff;
 }
 
-.sale .itemtitle h3{
-	float: left;
+.sale .itemtitle{
+	/*float: left;*/
+	text-transform: none;
 }
 
 ul.accomodation {
@@ -269,7 +278,7 @@ ul.accomodation {
 ul.accomodation li {
 	color: #fff;
 	font-size: 16px;
-	letter-spacing: 0.5px;
+	/*letter-spacing: 0.5px;*/
 }
 
 .col-md-12 {
@@ -307,13 +316,13 @@ h2.noborder {
 .pager {
 	margin: auto;
 	color: #fff;
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
 	padding-bottom: 15px;
 }
 
 .pager li {
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 }
 
 .pager li > a,
@@ -350,7 +359,7 @@ h2.noborder {
 }
 
 .round {
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
 	padding: 12px 14px;
 	border-radius: 100%;
@@ -383,6 +392,11 @@ h2.noborder {
 	height: 200px;
 	width: 100%;
 	border-radius: 4px;
+}
+
+.thumbnail h3 {
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 
@@ -419,9 +433,9 @@ h2.noborder {
 #slider-nav button {
 	cursor: pointer;
 	color: #fff;
-	font-family: 'mohavesemibold', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
-	padding: 5px 14px;
+	padding: 5px 14px 0px;
 }
 
 /* Lightbox */
@@ -574,22 +588,31 @@ h2.noborder {
 }
 
 /* Colors */
-.sunflower {
+/*.sunflower {
 	background-color: rgba(241, 196, 15, 1.0);
 	border: rgba(241, 196, 15, 1.0);
 }
 
 .lightsunflower {
 	background-color: rgba(241, 196, 15, 0.6);
+}*/
+
+.sunflower {
+	background-color: rgba(244, 179, 80, 1.0);
+	border: rgba(244, 179, 80, 1.0);
+}
+
+.lightsunflower {
+	background-color: rgba(244, 179, 80, 0.6);
 }
 
 .pumpkin {
-	background-color: rgba(230, 126, 34, 1.0);
-	border: rgba(230, 126, 34, 1.0);
+	background-color: rgba(211, 84, 0, 1.0);
+	border: rgba(211, 84, 0, 1.0);
 }
 
 .lightpumpkin {
-	background-color: rgba(230, 126, 34, 0.6);
+	background-color: rgba(211, 84, 0, 0.6);
 }
 
 .turquoise {
@@ -701,7 +724,12 @@ address a {
 
 	.margin-left {
 		margin-left: 25%;
-	}	
+	}
+
+	#wrapper a {
+		cursor: default !important;
+		pointer-events: none;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {

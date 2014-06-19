@@ -12,7 +12,7 @@
 						{{ Form::open(array('class' => 'form-horizontal', 'role' => 'form')) }}
 							<div class="col-md-9 col-sm-12 rightborder">							
 								<div class="form-group">
-									{{ Form::label('full_name', 'naam: ', array('class' => 'col-sm-2 control-label')) }}
+									{{ Form::label('full_name', 'Naam: ', array('class' => 'col-sm-2 control-label')) }}
 									<div class="col-sm-10">
 										{{ Form::text('full_name', '', array('class' => 'form-control')) }}
 										@if ($errors->has('full_name'))
@@ -42,7 +42,7 @@
 								</div> <!-- End form-group -->
 
 								<div class="form-group">
-									{{ Form::label('message', 'bericht: ', array('class' => 'col-sm-2 control-label')) }}
+									{{ Form::label('message', 'Bericht: ', array('class' => 'col-sm-2 control-label')) }}
 									<div class="col-sm-10">
 										{{ Form::textarea('message', '', array('class' => 'form-control transparent')) }}
 										@if ($errors->has('message'))
