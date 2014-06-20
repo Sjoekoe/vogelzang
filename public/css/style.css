@@ -75,6 +75,7 @@ button {
 
 .jumbotron a p {
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .jumbotron a:visited h1{
@@ -603,7 +604,7 @@ h2.noborder {
 }
 
 .lightsunflower {
-	background-color: rgba(244, 179, 80, 0.6);
+	background-color: rgba(244, 179, 80, 0.8);
 }
 
 .pumpkin {
