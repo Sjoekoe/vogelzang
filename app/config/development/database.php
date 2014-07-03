@@ -5,6 +5,7 @@ return [
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
+			'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
 			'database'  => 'vogelzang',
 			'username'  => 'root',
 			'password'  => 'root',

@@ -3,6 +3,10 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
 
+ a {
+ 	color: white;
+ }
+
  a:hover {
  	text-decoration: none;
  	color: white;

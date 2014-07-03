@@ -12,7 +12,10 @@
 		<div class="row titleheader">
 			<div class="col-md-12">
 				<h3 class="pull-left">Stal de vogelzang - Administration panel </h3>
-				<p class="pull-right">Ingelogd als {{  Auth::user()->username }}</p>
+				<div class="pull-right">
+					<p>Ingelogd als {{  Auth::user()->username }} - {{ link_to_route('user.sign-out', 'Log uit') }} </p>
+				</div>
+				<!-- <p class="pull-right">Ingelogd als {{  Auth::user()->username }}</p> -->
 			</div> <!-- End col-md-11 -->
 		</div><!-- End row titleheader -->
 		<div class="nav row">
@@ -26,7 +29,7 @@
 		</div>		
 	@endif
 	<div class="row content">
-		<div class="col-md-12 ">
+		<div class="col-md-12 col-xs-12">
 			@yield('content')		
 		</div>
 	</div>

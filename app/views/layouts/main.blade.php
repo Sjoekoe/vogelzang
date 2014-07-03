@@ -35,6 +35,7 @@
 	{{ HTML::script('js/jquery.js') }}
 	{{ HTML::script('js/slider.js') }}
 	{{ HTML::script('js/lightbox.js') }}
+	@yield('script')
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

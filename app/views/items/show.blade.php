@@ -11,6 +11,9 @@
 					</div>
 					<br>
 					<div class="row ">
+						<div class="pull-left fb-share-button" data-href="{{ URL::route('items.show', $item->id) }}" data-type="button">
+							
+						</div>
 						<p class="small pull-right author"><i>Gepost door {{ $item->user->username }} </i></p>
 					</div>
 					
@@ -47,5 +50,26 @@
 			</div>
 		</div>
 	</div>
+@stop
+
+@section('script')
+	<div id="fb-root"></div>
+	<script>
+		// window.fbAsyncInit = function() {
+		// 	FB.init({
+		// 		appId	: '489824724485150',
+		// 		xfbml	: true,
+		// 		version	: 'v2.0'
+		// 	});
+		// };
+	
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&appId=489824724485150&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 @stop
 	

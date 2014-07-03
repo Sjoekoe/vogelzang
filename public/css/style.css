@@ -686,6 +686,10 @@ address a {
 	background: url('../images/facebook12.png') no-repeat;
 }
 
+.fb-share-button {
+	color: white;
+}
+
 /* Mobile*/
 @media only screen and (max-width: 480px) {
 	.rightborder {

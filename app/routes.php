@@ -7,6 +7,9 @@ Route::group(array('before' => 'csrf'), function() {
 	Route::post('/contact', array('as' => 'contacts.store', 'uses' => 'ContactsController@store')); // Contact Page (POST)
 });
 
+// Route::get('/', function() {
+// 	var_dump(App::environment());
+// });
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index')); // Homepage
 Route::get('/horses', array('as' => 'horses.index', 'uses' => 'HorsesController@index')); // Te Koop pagina
 Route::get('/horses/show/{id}', array('as' => 'horses.show', 'uses' => 'HorsesController@show')); // Show Horse
