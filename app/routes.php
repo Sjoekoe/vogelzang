@@ -7,6 +7,8 @@ Route::group(array('before' => 'csrf'), function() {
 	Route::post('/contact', array('as' => 'contacts.store', 'uses' => 'ContactsController@store')); // Contact Page (POST)
 });
 
+
+
 // Route::get('/', function() {
 // 	var_dump(App::environment());
 // });
@@ -106,5 +108,18 @@ Route::group(array('before' => 'guest'), function() {
 	Route::get('/user/forgot-password', array('as' => 'user.recover-password', 'uses' => 'UserController@recoverPassword')); // Recover password (GET)
 	Route::get('/user/recover/{code}', array('as' => 'user.recover-password.code', 'uses' => 'UserController@recover')); //Recover password code (GET)
 }); // END UNAUTHENTICATED GROUP
+
+Route::get('/sitemap', function()
+{
+    $file = public_path(). "/download/sitemap.xml";  // <- Replace with the path to your .xml file
+    // check if the file exists
+    if (file_exists($file)) {
+        // read the file into a string
+        $content = file_get_contents($file);
+        // create a Laravel Response using the content string, an http response code of 200(OK),
+        //  and an array of html headers including the pdf content type
+        return Response::make($content, 200, array('content-type'=>'application/xml'));
+    }
+});
 
  ?>
