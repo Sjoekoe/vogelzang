@@ -99,7 +99,7 @@ class ItemsController extends \BaseController {
 		$item = Item::where('id', '=', $id);
 		if ($item->count()) {
 			$item = $item->first();
-			return View::make('items.show', compact('item'))->with('title', 'Nieuws');
+			return View::make('items.show', compact('item'))->with('title', $item->title);
 		}
 
 		return Redirect::route('items.index')->with('global', 'Dit bericht bestaat niet');
