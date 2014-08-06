@@ -107,7 +107,7 @@ class HorsesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$horse = Horse::where('id', '=', $id);
+		$horse = Horse::with('horsepicture')->where('id', '=', $id);
 		if($horse->count()) {
 			$horse = $horse->first();
 			return View::make('horses.show', compact('horse'))->with('title', 'Pony\'s / paarden te koop');

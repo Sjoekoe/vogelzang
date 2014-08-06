@@ -96,7 +96,7 @@ class ItemsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$item = Item::where('id', '=', $id);
+		$item = Item::with('itemphoto')->where('id', '=', $id);
 		if ($item->count()) {
 			$item = $item->first();
 			return View::make('items.show', compact('item'))->with('title', $item->title);
