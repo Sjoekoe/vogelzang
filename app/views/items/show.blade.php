@@ -23,13 +23,21 @@
 						@if ($item->itemphoto()->count())
 							<div class="slider">
 								<ul id="wrapper">
+                                    @foreach ($item->itemphoto as $photo)
 									<li>
-										<a href=" {{ URL::to($item->itemphoto->path) }} " rel="gallery" title=" {{ $item->title }} " class="lightbox">
-											{{ HTML::image($item->itemphoto->path) }}
+										<a href=" {{ URL::to($photo->path) }} " rel="gallery" title=" {{ $item->title }} " class="lightbox">
+											{{ HTML::image($photo->path) }}
 										</a>	
 									</li>
+                                    @endforeach
 								</ul>
 							</div>
+                            @if ($item->itemphoto->count() > 1)
+                                <div id="slider-nav" class="text-center">
+                                    <button data-dir="prev" class="pumpkin"><span class="glyphicon glyphicon-arrow-left"></button>
+                                    <button data-dir="next" class="pumpkin"><span class="glyphicon glyphicon-arrow-right"></button>
+                                </div>
+                            @endif
 						@else
 							{{ HTML::image('images/items/random/'. rand(0, 8) .'.jpg') }}
 						@endif
