@@ -197,12 +197,13 @@ class ItemsController extends \BaseController {
      */
     public function destroy($id) {
         $item  = Item::findOrFail($id);
-        $photo = Item::find($id)->itemphoto;
+        $photos = Item::find($id)->itemphoto;
 
-        if ( ! empty($photo) ) {
-            File::delete(public_path() . $photo->path);
-            $photo->delete();
-
+        if($photos->count()) {
+            foreach($photos as $photo) {
+                File::delete(public_path().$photo->path);
+                $photo->delete();
+            }
             rmdir(public_path() . '/uploads/items/' . $item->id);
         }
 
