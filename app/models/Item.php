@@ -8,7 +8,7 @@ class Item extends \Eloquent {
 	}
 
 	public function itemphoto() {
-		return $this->hasOne('Itemphoto', 'item_id', 'id');
+		return $this->hasMany('Itemphoto', 'item_id', 'id');
 	}
 
 }
