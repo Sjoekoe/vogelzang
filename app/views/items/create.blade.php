@@ -69,7 +69,7 @@
 			<div class="form-group">
 				{{ Form::label('image', 'Foto: ', array('class' => 'col-sm-2 control-label')) }}
 				<div class="col-sm-5">
-					{{ Form::file('image') }}
+					{{ Form::file('image[]', ['multiple' => 'true']) }}
 					@if ($errors->has('image'))
 						<span class="text-danger"> {{ $errors->first('image') }} </span>
 					@endif
