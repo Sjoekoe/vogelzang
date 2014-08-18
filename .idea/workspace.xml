@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e17302a8-937d-482e-bd12-eb71bf5fab0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/items/edit.blade.php" />
     </list>
     <ignored path="vogelzang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <file leaf-file-name="edit.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/items/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="713" column="22" selection-start="10172" selection-end="10172" vertical-scroll-proportion="0.6709753" vertical-offset="19393" max-vertical-offset="22232">
+            <state line="86" column="65" selection-start="3298" selection-end="3298" vertical-scroll-proportion="0.45498782" vertical-offset="2034" max-vertical-offset="3276">
               <folding />
             </state>
           </provider>
@@ -54,6 +54,7 @@
         <option value="$PROJECT_DIR$/app/models/Item.php" />
         <option value="$PROJECT_DIR$/app/views/items/show.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/views/items/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -687,6 +688,13 @@
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="713" column="22" selection-start="10172" selection-end="10172" vertical-scroll-proportion="0.6709753" vertical-offset="19393" max-vertical-offset="22232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/items/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="65" selection-start="3298" selection-end="3298" vertical-scroll-proportion="0.45498782" vertical-offset="2034" max-vertical-offset="3276">
           <folding />
         </state>
       </provider>
