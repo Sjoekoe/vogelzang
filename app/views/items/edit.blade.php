@@ -78,10 +78,10 @@
         </div>
     </div>
     @else
-    @foreach ($item->itemphoto as $photo)
     <div class="form-group">
         {{ Form::label('image', 'Foto: ', array('class' => 'col-sm-2 control-label')) }}
-        <div class="col-sm-5">
+        @foreach ($item->itemphoto as $photo)
+        <div class="col-sm-4">
             <div class="thumbnail">
                 {{ HTML::image($photo->path) }}
                 <p><a href=" {{ URL::route('itemphoto.destroy', $photo->id) }} "> <span
