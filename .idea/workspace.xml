@@ -23,34 +23,17 @@
     <favorites_list name="vogelzang" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/views/items/show.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="131" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.76143384" vertical-offset="420" max-vertical-offset="2464">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/views/horses/show.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="54" column="121" selection-start="1698" selection-end="1743" vertical-scroll-proportion="0.5883807" vertical-offset="1036" max-vertical-offset="2324">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/items/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="51" selection-start="700" selection-end="700" vertical-scroll-proportion="0.6922126" vertical-offset="28" max-vertical-offset="2464">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -485,7 +468,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -688,14 +671,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/horses/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="121" selection-start="1698" selection-end="1743" vertical-scroll-proportion="0.5883807" vertical-offset="1036" max-vertical-offset="2324">
+        <state line="51" column="30" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.48454884" vertical-offset="1036" max-vertical-offset="2324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-22.85429" vertical-offset="19449" max-vertical-offset="22232">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/items/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="131" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.76143384" vertical-offset="420" max-vertical-offset="2464">
+        <state line="21" column="51" selection-start="700" selection-end="700" vertical-scroll-proportion="0.6922126" vertical-offset="28" max-vertical-offset="2464">
           <folding />
         </state>
       </provider>
