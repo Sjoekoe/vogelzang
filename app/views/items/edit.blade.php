@@ -78,8 +78,8 @@
         </div>
     </div>
     @else
-    <div class="form-group">
     @foreach ($item->itemphoto as $photo)
+    <div class="form-group">
         {{ Form::label('image', 'Foto: ', array('class' => 'col-sm-2 control-label')) }}
         <div class="col-sm-4">
             <div class="thumbnail">
