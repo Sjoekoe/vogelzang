@@ -706,9 +706,13 @@ address a {
 		float: left;
 	}
 
+	.thumbnail img {
+		display: none;
+	}
 
-
-	
+	.salethumb.noshow{
+		display: none;
+	}
 	.footer {
 		text-align: center;
 	}
