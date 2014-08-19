@@ -42,11 +42,11 @@
 								</div> <!-- End form-group -->
 
 								<div class="form-group">
-									{{ Form::label('message', 'Bericht: ', array('class' => 'col-sm-2 control-label')) }}
+									{{ Form::label('q', 'Bericht: ', array('class' => 'col-sm-2 control-label')) }}
 									<div class="col-sm-10">
-										{{ Form::textarea('message', '', array('class' => 'form-control transparent')) }}
-										@if ($errors->has('message'))
-											<span class="error"> {{ $errors->first('message') }} </span>
+										{{ Form::textarea('q', '', array('class' => 'form-control transparent')) }}
+										@if ($errors->has('q'))
+											<span class="error"> {{ $errors->first('q') }} </span>
 										@endif
 									</div> <!-- End col-sm-10 -->						
 								</div> <!-- End form gorup -->

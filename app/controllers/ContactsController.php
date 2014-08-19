@@ -35,7 +35,7 @@ class ContactsController extends \BaseController {
 				'full_name'	=> 'required',
 				'subject' 	=> 'required|max:60|min:3',
 				'email'		=> 'required|email',
-				'message'	=> 'required|max:2000'
+				'q'	=> 'required|max:2000'
 			)
 		);
 
@@ -44,21 +44,23 @@ class ContactsController extends \BaseController {
 		} else {
 			$subject 		= Input::get('subject');
 			$email 			= Input::get('email');
-			$message 		= Input::get('message');
+			$q 		        = Input::get('q');
 			$name			= Input::get('full_name');
 
 			$contact = Contact::create(array(
 				'subject' 	=> $subject,
 				'full_name'	=> $name,
 				'email'		=> $email,
-				'message'	=> $message
+				'message'	=> $q
 			));
 
 			if ($contact) {
 				Mail::send('emails.contact', array(
 					'link'		=> URL::route('contacts.show', $contact->id),
 					'subject' 	=> $subject,
-					'email'		=> $email
+					'email'		=> $email,
+                    'question'  => $q,
+                    'name'      => $name
 				), function($message) use ($contact) {
 					$message->to('info@staldevogelzang.be', 'Peter')->subject('U hebt een nieuw bericht vanop de site.');
 				});

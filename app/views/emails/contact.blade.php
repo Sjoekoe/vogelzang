@@ -1,6 +1,12 @@
 U hebt een nieuw bericht ontvangen vanop www.devogelzang.be <br>
-<br>
-U kan dit bekijken via onderstaande link. <br> <br>
+<br> --- <br/>
+{{ $subject }} <br/>
+--- <br/>
+
+{{ nl2br($question) }} <br/>
+
+van <a href="mailto:{{$email}}">{{$name}}</a> <br/>
+
 --- <br>
 {{ $link }} <br>
 ---
