@@ -101,7 +101,7 @@ class ItemsController extends \BaseController {
     }
 
     public function showAdmin($id) {
-        $item = Item::where('id', '=', $id);
+        $item = Item::with('itemphoto')->where('id', '=', $id);
         if ( $item->count() ) {
             $item = $item->first();
 
@@ -151,7 +151,7 @@ class ItemsController extends \BaseController {
 
 
             foreach ( $images as $image ) {
-                
+
                 if ( ! is_null($image) ) {
                     $extension  = $image->getClientOriginalExtension();
                     $path       = '/uploads/items/' . $item->id;

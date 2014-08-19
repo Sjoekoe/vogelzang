@@ -54,9 +54,11 @@
 		</div>
 		@if ($item->itemphoto()->count())
 			<div class="col-md-4">
+                @foreach ($item->itemphoto as $photo)
 				<div class="thumbnail">
-					{{ HTML::image($item->itemphoto->path) }}
+					{{ HTML::image($photo->path) }}
 				</div>
+                @endforeach
 			</div>
 		@endif
 		<br>

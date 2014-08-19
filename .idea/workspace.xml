@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e17302a8-937d-482e-bd12-eb71bf5fab0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ItemsController.php" afterPath="$PROJECT_DIR$/app/controllers/ItemsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/items/show.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/items/show.blade.php" />
     </list>
     <ignored path="vogelzang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,34 +24,17 @@
     <favorites_list name="vogelzang" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="ItemsController.php" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/ItemsController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="153" column="16" selection-start="4786" selection-end="4786" vertical-scroll-proportion="0.37948084" vertical-offset="3977" max-vertical-offset="6468">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="HorsesController.php" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/HorsesController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="170" column="39" selection-start="4468" selection-end="4468" vertical-scroll-proportion="0.41409147" vertical-offset="4425" max-vertical-offset="6860">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/items/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="37" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.5883807" vertical-offset="1148" max-vertical-offset="2156">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -73,6 +57,7 @@
         <option value="$PROJECT_DIR$/app/views/items/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/items/create.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/ItemsController.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/items/show.blade.php" />
       </list>
     </option>
   </component>
@@ -303,6 +288,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vogelzang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vogelzang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="items" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vogelzang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vogelzang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="start" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -506,7 +539,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -713,14 +746,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HorsesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="39" selection-start="4468" selection-end="4468" vertical-scroll-proportion="0.41409147" vertical-offset="4425" max-vertical-offset="6860">
+        <state line="168" column="0" selection-start="4433" selection-end="4433" vertical-scroll-proportion="0.3448702" vertical-offset="4425" max-vertical-offset="6860">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ItemsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="16" selection-start="4786" selection-end="4786" vertical-scroll-proportion="0.37948084" vertical-offset="3977" max-vertical-offset="6468">
+        <state line="103" column="41" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.27564895" vertical-offset="2661" max-vertical-offset="6468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/items/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="37" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.5883807" vertical-offset="1148" max-vertical-offset="2156">
           <folding />
         </state>
       </provider>
