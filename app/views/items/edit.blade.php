@@ -67,19 +67,19 @@
         </div>
     </div>
 
-    @if (!$item->itemphoto()->count())
+
     <div class="form-group">
         {{ Form::label('image', 'Foto: ', array('class' => 'col-sm-2 control-label')) }}
         <div class="col-sm-5">
-            {{ Form::file('image') }}
+            {{ Form::file('images[]', ['multiple' => 'true']) }}
             @if ($errors->has('image'))
             <span class="text-danger"> {{ $errors->first('image') }} </span>
             @endif
         </div>
     </div>
-    @else
+
     <div class="form-group">
-        {{ Form::label('image', 'Foto's: ', array('class' => 'col-sm-2 control-label')) }}
+        {{ Form::label('image', 'Foto\'s: ', array('class' => 'col-sm-2 control-label')) }}
         @foreach ($item->itemphoto as $photo)
         <div class="col-sm-4">
             <div class="thumbnail">
@@ -90,7 +90,7 @@
         </div>
         @endforeach
     </div>
-    @endif
+
     <div class="form-group">
         <div class="col-sm-5 col-sm-offset-2">
             {{ Form::submit('Wijzigingen opslaan', array('class' => 'btn btn-custom')) }}
