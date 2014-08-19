@@ -712,6 +712,10 @@ address a {
 	.salethumb.noshow.thumbnail img{
         visibility: visible;
 	}
+    #wrapper a {
+        cursor: default !important;
+        pointer-events: none;
+    }
 	.footer {
 		text-align: center;
 	}
