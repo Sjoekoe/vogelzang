@@ -705,11 +705,7 @@ address a {
 		float: left;
 	}
 
-	.thumbnail img {
-        display: none;
-	}
-
-	.salethumb.noshow.thumbnail img{
+    .salethumb.noshow.thumbnail img{
         visibility: visible;
 	}
     #wrapper a {
