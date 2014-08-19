@@ -150,7 +150,7 @@ class ItemsController extends \BaseController {
             $images = Input::file('images');
 
 
-            if ($images) {
+            if (isset($images)) {
                 foreach ( $images as $image ) {
                     $extension  = $image->getClientOriginalExtension();
                     $path       = '/uploads/items/' . $item->id;

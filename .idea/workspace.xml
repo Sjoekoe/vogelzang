@@ -29,7 +29,7 @@
           <file leaf-file-name="ItemsController.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/ItemsController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="152" column="26" selection-start="4752" selection-end="4752" vertical-scroll-proportion="0.51792336" vertical-offset="3837" max-vertical-offset="6440">
+                <state line="152" column="30" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.27564895" vertical-offset="4033" max-vertical-offset="6440">
                   <folding />
                 </state>
               </provider>
@@ -42,7 +42,7 @@
           <file leaf-file-name="HorsesController.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/HorsesController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="224" column="0" selection-start="6199" selection-end="6199" vertical-scroll-proportion="2.3522868" vertical-offset="4369" max-vertical-offset="6860">
+                <state line="224" column="0" selection-start="6199" selection-end="6199" vertical-scroll-proportion="2.1792336" vertical-offset="4509" max-vertical-offset="6860">
                   <folding />
                 </state>
               </provider>
@@ -699,7 +699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HorsesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="0" selection-start="6199" selection-end="6199" vertical-scroll-proportion="2.3522868" vertical-offset="4369" max-vertical-offset="6860">
+        <state line="224" column="0" selection-start="6199" selection-end="6199" vertical-scroll-proportion="2.1792336" vertical-offset="4509" max-vertical-offset="6860">
           <folding />
         </state>
       </provider>
@@ -713,7 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ItemsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="26" selection-start="4752" selection-end="4752" vertical-scroll-proportion="0.51792336" vertical-offset="3837" max-vertical-offset="6440">
+        <state line="152" column="30" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.27564895" vertical-offset="4033" max-vertical-offset="6440">
           <folding />
         </state>
       </provider>
