@@ -701,7 +701,7 @@ address a {
 	}
 
 	.thumbnail img {
-
+        display: none;
 	}
 
 	.salethumb.noshow{
