@@ -38,8 +38,8 @@ class ItemsController extends \BaseController {
             $user_id = Auth::user()->id;
         }
 
-        $validator = Validator::make(Input::all(), array('title' => 'required|min:3|max:50', 'message' => 'required|max:2000'//'image' => 'mimes:jpg,png,jpeg,bmp,JPG'
-            ));
+        $validator = Validator::make(Input::all(), array('title' => 'required|min:3|max:50', 'message' => 'required|max:2000' //'image' => 'mimes:jpg,png,jpeg,bmp,JPG'
+        ));
 
         if ( $validator->fails() ) {
             return Redirect::route('items.create')->withErrors($validator)->withInput();
@@ -49,7 +49,7 @@ class ItemsController extends \BaseController {
 
             $files = Input::file('image');
 
-            if ($files) {
+            if ( $files ) {
 
                 foreach ( $files as $file ) {
                     $extension  = $file->getClientOriginalExtension();
@@ -58,8 +58,8 @@ class ItemsController extends \BaseController {
                     $pathToFile = public_path() . $path . '/' . $filename . '.' . $extension;
 
 
-                    if(!file_exists(public_path().$path)) {
-                        File::makeDirectory(public_path().$path);
+                    if ( ! file_exists(public_path() . $path) ) {
+                        File::makeDirectory(public_path() . $path);
                     }
 
                     //File::makeDirectory(public_path() . $path);
@@ -140,7 +140,6 @@ class ItemsController extends \BaseController {
      */
     public function update($id) {
         $item      = Item::findOrFail($id);
-        $images     = Input::file('image');
         $validator = Validator::make(Input::all(), array('title' => 'required|min:3|max:50', 'message' => 'required|max:2000'));
 
         if ( $validator->fails() ) {
@@ -148,20 +147,21 @@ class ItemsController extends \BaseController {
         } else {
             //  Update the news DB
             $item->fill(Input::all());
+            $images = Input::file('images');
 
-            // Delete old picture if there is one
+
             if ( ! empty($images) ) {
-                foreach($images as $image) {
-                    $extension = $image->getClientOriginalExtension();
-                    $path      = '/uploads/items/' . $item->id;
-                    $filename  = str_random(12);
+                foreach ( $images as $image ) {
+                    $extension  = $image->getClientOriginalExtension();
+                    $path       = '/uploads/items/' . $item->id;
+                    $filename   = str_random(12);
                     $pathToFile = public_path() . $path . '/' . $filename . '.' . $extension;
 
                     if ( ! file_exists(public_path() . $path) ) {
                         File::makeDirectory(public_path() . $path);
                     }
 
-                    Image::make(Input::file('image')->getrealpath())->resize(null, 870, function ($constraints) {
+                    Image::make($image->getrealpath())->resize(null, 870, function ($constraints) {
                         $constraints->aspectRatio();
                     })->save($pathToFile);
 
@@ -188,12 +188,12 @@ class ItemsController extends \BaseController {
      * @return Response
      */
     public function destroy($id) {
-        $item  = Item::findOrFail($id);
+        $item   = Item::findOrFail($id);
         $photos = Item::find($id)->itemphoto;
 
-        if($photos->count()) {
-            foreach($photos as $photo) {
-                File::delete(public_path().$photo->path);
+        if ( $photos->count() ) {
+            foreach ( $photos as $photo ) {
+                File::delete(public_path() . $photo->path);
                 $photo->delete();
             }
             rmdir(public_path() . '/uploads/items/' . $item->id);
