@@ -151,6 +151,7 @@ class ItemsController extends \BaseController {
 
 
             foreach ( $images as $image ) {
+                dd($image);
                 if ( ! empty($image) ) {
                     $extension  = $image->getClientOriginalExtension();
                     $path       = '/uploads/items/' . $item->id;
