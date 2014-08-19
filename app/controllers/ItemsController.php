@@ -150,8 +150,8 @@ class ItemsController extends \BaseController {
             $images = Input::file('images');
 
 
-            if (isset($images)) {
-                foreach ( $images as $image ) {
+            foreach ( $images as $image ) {
+                if ( ! empty($image) ) {
                     $extension  = $image->getClientOriginalExtension();
                     $path       = '/uploads/items/' . $item->id;
                     $filename   = str_random(12);
