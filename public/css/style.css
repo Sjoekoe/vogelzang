@@ -55,9 +55,8 @@ button {
 
 .jumbotron {
 	height: 950px;
-	background-image: url('../images/bg_image.jpg');
-	background-position: center -300px;
-	margin-bottom: 0;
+    background: url('../images/bg_image.jpg') center -300px;
+    margin-bottom: 0;
 }
 
 .jumbotron .container {
@@ -103,9 +102,8 @@ p.small {
 
 .content {
 	border-radius: 5px;
-	padding:15px;
-	padding-bottom: 0;
-	max-height: 580px;
+    padding: 15px 15px 0;
+    max-height: 580px;
 	overflow: auto;
 }
 
@@ -126,8 +124,7 @@ p.small {
 .contact {
 	font-family: 'PT-Sans', sans-serif;
 	border-radius: 5px;
-	padding: 15px;
-	padding-bottom: 35px;
+    padding: 15px 15px 35px;
 }
 
 .contact .global {
@@ -225,9 +222,8 @@ form input[type=text]:focus, form textarea:focus {
 .sale {
 	font-family: 'PT Sans', sans-serif;
 	border-radius: 5px;
-	padding: 15px;
-	padding-bottom: 15px;
-	/*max-height: 550px;*/
+    padding: 15px;
+    /*max-height: 550px;*/
 	max-height: 700px;
 	overflow: auto;
 }
@@ -682,9 +678,7 @@ address a {
 	color: #a9b0a6;
 }
 
-.facebook {
-	background: url('../images/facebook12.png') no-repeat;
-}
+
 
 .fb-share-button {
 	color: white;
@@ -707,11 +701,11 @@ address a {
 	}
 
 	.thumbnail img {
-		display: none;
+
 	}
 
 	.salethumb.noshow{
-		display: none;
+
 	}
 	.footer {
 		text-align: center;

@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6 marginleft leftborder clearfix">
-					<div class="thumbnail salethumb noshow pomegranate">
+					<div class="thumbnail salethumb pomegranate">
 						<div class="slider">
 							<ul id="wrapper">
 								@foreach ($horse->horsepicture as $picture)
