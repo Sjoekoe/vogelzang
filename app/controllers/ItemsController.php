@@ -149,8 +149,10 @@ class ItemsController extends \BaseController {
             $item->fill(Input::all());
             $images = Input::file('images');
 
+            dd($images);
 
-            if ( ! empty($images) ) {
+
+            if (!empty($images) ) {
                 foreach ( $images as $image ) {
                     $extension  = $image->getClientOriginalExtension();
                     $path       = '/uploads/items/' . $item->id;

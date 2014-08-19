@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e17302a8-937d-482e-bd12-eb71bf5fab0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ItemsController.php" afterPath="$PROJECT_DIR$/app/controllers/ItemsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/create.blade.php" afterPath="$PROJECT_DIR$/app/views/items/create.blade.php" />
     </list>
     <ignored path="vogelzang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
           <file leaf-file-name="ItemsController.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/ItemsController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="163" column="38" selection-start="5289" selection-end="5289" vertical-scroll-proportion="0.76019776" vertical-offset="3949" max-vertical-offset="6440">
+                <state line="151" column="24" selection-start="4749" selection-end="4749" vertical-scroll-proportion="0.31025958" vertical-offset="3977" max-vertical-offset="6496">
                   <folding />
                 </state>
               </provider>
@@ -714,7 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ItemsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="38" selection-start="5289" selection-end="5289" vertical-scroll-proportion="0.76019776" vertical-offset="3949" max-vertical-offset="6440">
+        <state line="151" column="24" selection-start="4749" selection-end="4749" vertical-scroll-proportion="0.31025958" vertical-offset="3977" max-vertical-offset="6496">
           <folding />
         </state>
       </provider>
