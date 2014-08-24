@@ -9,9 +9,7 @@ Route::group(array('before' => 'csrf'), function() {
 
 
 
-// Route::get('/', function() {
-// 	var_dump(App::environment());
-// });
+
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index')); // Homepage
 Route::get('/horses', array('as' => 'horses.index', 'uses' => 'HorsesController@index')); // Te Koop pagina
 Route::get('/horses/show/{id}', array('as' => 'horses.show', 'uses' => 'HorsesController@show')); // Show Horse
@@ -40,6 +38,7 @@ Route::group(array('before' => 'auth'), function() {
 			Route::patch('/admin/horses/edit/{id}', array('as' => 'horses.update', 'uses' => 'HorsesController@update')); // Update Horse (PATCH)
 			Route::post('/admin/news/create', array('as'=> 'items.store', 'uses' => 'ItemsController@store')); // Creates a news item
 			Route::patch('/admin/news/edit/{id}', array('as' => 'items.update', 'uses' => 'ItemsController@update')); // Updates a news item
+            Route::post('/admin/contacts/show/{id}', array('as' => 'contacts.update', 'uses' => 'ContactsController@update'));
 		}); // END CSRF GROUP
 
 		Route::get('/admin', array('as' => 'admin.index', 'uses' => 'HomeController@admin')); // Admin Dashboard (GET)

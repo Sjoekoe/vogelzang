@@ -103,15 +103,30 @@ class ContactsController extends \BaseController {
 		//
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @return Response
+     */
+	public function update()
 	{
-		//
+        $validator = Validator::make(Input::all(),
+            array(
+                'reply' => 'required'
+            )
+        );
+
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->withErrors($validator);
+        } else {
+            Mail::send('emails.reply', [
+                'reply' => Input::get('reply')
+            ], function($message) {
+                $message->to(Input::get('email'), Input::get('name'))->subject('Antwoord op: '. Input::get('subject'));
+            });
+        }
+
+        return Redirect::back()->with('global', 'Het bericht is verzonden');
 	}
 
 	/**
