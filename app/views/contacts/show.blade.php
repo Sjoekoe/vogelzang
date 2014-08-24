@@ -56,7 +56,7 @@
     {{ Form::open() }}
     {{ Form::hidden('email', $contact->email) }}
     {{ Form::hidden('name', $contact->full_name) }}
-    {{ Form::hidden('subject', $contact->message) }}
+    {{ Form::hidden('subject', $contact->subject) }}
     <!-- Reply Form input -->
     <div class="form-group">
         {{ Form::label('reply', 'Antwoord:') }}
