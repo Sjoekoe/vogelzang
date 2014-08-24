@@ -3,5 +3,5 @@
 <br/><br/>
 --- <br/>
 <i>Stal de vogelzang</i> <br/>
-Vogelzangstraat 12 <br/>
-9160 Lokeren <br/>
+<i>Vogelzangstraat 12</i> <br/>
+<i>9160 Lokeren </i><br/>

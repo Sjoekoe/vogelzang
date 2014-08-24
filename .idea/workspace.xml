@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e17302a8-937d-482e-bd12-eb71bf5fab0a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/reply.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ContactsController.php" afterPath="$PROJECT_DIR$/app/controllers/ContactsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/main.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/main.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contacts/show.blade.php" afterPath="$PROJECT_DIR$/app/views/contacts/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/emails/reply.blade.php" afterPath="$PROJECT_DIR$/app/views/emails/reply.blade.php" />
     </list>
     <ignored path="vogelzang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContactsController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
+      <file leaf-file-name="reply.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/emails/reply.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="46" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.4462299" vertical-offset="3055" max-vertical-offset="4312">
+            <state line="6" column="20" selection-start="125" selection-end="125" vertical-scroll-proportion="0.20437956" vertical-offset="0" max-vertical-offset="822">
               <folding />
             </state>
           </provider>
@@ -67,8 +62,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/contacts/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/emails/reply.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/ContactsController.php" />
+        <option value="$PROJECT_DIR$/app/views/emails/reply.blade.php" />
       </list>
     </option>
   </component>
@@ -875,16 +870,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/emails/reply.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="41" selection-end="41" vertical-scroll-proportion="0.10218978" vertical-offset="0" max-vertical-offset="822">
+        <state line="122" column="46" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.4462299" vertical-offset="3055" max-vertical-offset="4312">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/emails/reply.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="46" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.4462299" vertical-offset="3055" max-vertical-offset="4312">
+        <state line="6" column="20" selection-start="125" selection-end="125" vertical-scroll-proportion="0.20437956" vertical-offset="0" max-vertical-offset="822">
           <folding />
         </state>
       </provider>
