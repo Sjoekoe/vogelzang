@@ -4,12 +4,16 @@
  }
 
  a {
- 	color: white;
+ 	color: #1CB88E;
  }
 
  a:hover {
  	text-decoration: none;
  	color: white;
+ }
+
+ .titleheader a {
+     color: #FFFFFF;
  }
 
  ul {
