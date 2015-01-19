@@ -36,11 +36,9 @@
 							Er bestaat ook de mogelijkheid om te overnachten, en ook eten is voorzien.</p>
 						<p class="small">De plaatsen voor deze kampen zijn beperkt, dus snel zijn is de boodschap. <br> 
 							Contacteer ons om in te schrijven, of kom gerust eens langs.</p> <br>
-						<h3 class="underlined">Data</h3>
+						<h3 class="underlined">Data 2015</h3>
 						<ul class="accomodation">
-							<li>30 juni - 4 juli</li>
-							<li>11 augustus - 13 augustus</li>
-							<li>25 augustus - 26 augustus</li>
+							<li>16 Februari - 22 Februari</li>
 						</ul>
 					</div>
 				</div>
