@@ -29,7 +29,7 @@
 							</li>
 						</ul>
 					</div>					
-					<div class="col-md-6 col-sm-6 nopadright">
+					<div class="col-md-6 col-sm-6 nopadright leftborder">
 						<h3 class="underlined">Ponykampen</h3>
 						<p class="small">Tijdens de schoolvakanties organiseren wij in samenwerking met de stad lokeren ponykampen. <br>
 						 De duur van de kampen varieert van 2 dagen tot een hele week, waar er tal van activiteiten gepland staan voor de deelnemers.

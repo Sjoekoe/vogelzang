@@ -81,7 +81,6 @@ button {
 	color: #31C3D9;
 }
 
-
 .jumbotron p {
 	color: #31C3D9;
 	font-size: 20px;
@@ -106,8 +105,6 @@ p.small {
     max-height: 580px;
 	overflow: auto;
 }
-
-
 
 .content h3 {
 	font-family: 'PT Sans', sans-serif;
@@ -432,7 +429,7 @@ h2.noborder {
 	color: #fff;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
-	padding: 5px 14px 0px;
+	padding: 5px 14px 0;
 }
 
 /* Lightbox */
@@ -441,9 +438,6 @@ h2.noborder {
 	/*width: 800px;*/
 	margin: 0 auto;
 }
-
-
-
 
 #images li,#images li a,#images li a img {
 	float: left;
@@ -657,7 +651,7 @@ h2.noborder {
 .footer {
 	color: #a9b0a6;
 	position: absolute;
-	box-shadow: 0px 500px 0px 500px #2d3235;
+	box-shadow: 0 500px 0 500px #2d3235;
 	background-color: #2d3235;
 }
 
@@ -768,9 +762,6 @@ address a {
 		border-bottom: 1px dashed #fff;
 		padding-bottom: 15px;
 	}
-}
-
-	
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation:landscape) {
