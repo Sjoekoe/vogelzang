@@ -39,6 +39,13 @@
 						<h3 class="underlined">Data 2015</h3>
 						<ul class="accomodation">
 							<li>16 Februari - 22 Februari</li>
+							<li>13 April - 17 April (Cool For Kids &amp; de Vogelzang)</li>
+							<li>1 Juli - 3 Juli (de Vogelzang)</li>
+							<li>6 Juli - 10 Juli (de Vogelzang)</li>
+							<li>13 Juli - 17 Juli (Stad Lokeren)</li>
+							<li>10 Augustus - 14 Augustus (Stad Lokeren)</li>
+							<li>17 Augustus - 21 Augustus (Stad Lokeren)</li>
+							<li>24 Augustus - 28 Augustus (Cool For Kids)</li>
 						</ul>
 					</div>
 				</div>
