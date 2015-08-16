@@ -18,9 +18,6 @@
 				<!-- <p class="pull-right">Ingelogd als {{  Auth::user()->username }}</p> -->
 			</div> <!-- End col-md-11 -->
 		</div><!-- End row titleheader -->
-		<div class="nav row">
-			@include('layouts.admingation')
-		</div>
 		@if (Session::has('global'))
 		<div class="row global">
 			<div class="col-md-4 col-md-offset-4">

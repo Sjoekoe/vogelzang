@@ -1,48 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-	<div class="col-md-2 quicknav">
-		<h3>Snelmenu</h3>
-		<ul>
-			<li>
-				<a href=" {{ URL::route('admin.index') }} ">
-					<span class="glyphicon glyphicon-th-large"></span> Admin panel
-				</a>
-			</li>
-			<li>
-				<a href=" {{ URL::route('home') }} ">
-					<span class="glyphicon glyphicon-home"></span> Home
-				</a>
-			</li>
-			<li >
-				<a href=" {{ URL::route('accounts.index') }} ">
-					<span class="glyphicon glyphicon-user"></span> Gebruikers
-				</a>	
-			</li>
-			<li >
-				<a href=" {{ URL::route('contacts.index') }} ">
-					<span class="glyphicon glyphicon-envelope"></span> Berichten
-				</a>
-			</li>
-			<li class="active">
-				<a href=" {{ URL::route('horses.admin.index') }} ">
-					<span class="glyphicon glyphicon-shopping-cart"></span> Paarden
-				</a>
-				<ul>
-					<li>
-						<a href=" {{ URL::route('horses.create') }} ">
-							<span class="glyphicon glyphicon-plus"></span> Paard toevoegen
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href=" {{ URL::route('items.admin.index') }} ">
-					<span class="glyphicon glyphicon-pencil"></span> Nieuws
-				</a>
-			</li>
-		</ul>
-	</div> <!-- End col-md-2 quicknav -->
+    @include ('layouts._partials._quicknav_horses')
+
 	<div class="col-md-8 col-md-offset-1 truecontent">
 		<h3>Wijzig {{ $horse->name }}</h3>
 		{{ Form::model($horse, array('method' => 'patch', 'files' => 'true', 'role' => 'form', 'class' => 'form-horizontal', 'route' => array('horses.update', $horse->id))) }}
