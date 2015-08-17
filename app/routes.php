@@ -7,9 +7,6 @@ Route::group(['before' => 'csrf'], function() {
 	Route::post('/contact', ['as' => 'contacts.store', 'uses' => 'ContactsController@store']); // Contact Page (POST)
 });
 
-
-
-
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']); // Homepage
 Route::get('/horses', ['as' => 'horses.index', 'uses' => 'HorsesController@index']); // Te Koop pagina
 Route::get('/horses/show/{id}', ['as' => 'horses.show', 'uses' => 'HorsesController@show']); // Show Horse
@@ -41,6 +38,8 @@ Route::group(['before' => 'auth'], function() {
             Route::post('/admin/contacts/show/{id}', ['as' => 'contacts.update', 'uses' => 'ContactsController@update']);
             Route::post('/admin/ponies/create', ['as' => 'pony.store', 'uses' => 'PonyController@store']);
             Route::patch('/admin/ponies/edit/{id}', ['as' => 'pony.update', 'uses' => 'PonyController@update']);
+            Route::post('/roster/create', ['as' => 'roster.store', 'uses' => 'RosterController@store']);
+            Route::patch('/roster/edit/{id}', ['as' => 'roster.update', 'uses' => 'RosterController@update']);
 		}); // END CSRF GROUP
 
 		Route::get('/admin', ['as' => 'admin.index', 'uses' => 'HomeController@admin']); // Admin Dashboard (GET)
@@ -82,6 +81,13 @@ Route::group(['before' => 'auth'], function() {
         Route::get('/admin/ponies/create', ['as' => 'pony.create', 'uses' => 'PonyController@create']);
         Route::get('/admin/ponies/edit/{id}', ['as' => 'pony.edit', 'uses' => 'PonyController@edit']);
         Route::get('/admin/ponies/delete/{id}', ['as' => 'pony.delete', 'uses' => 'PonyController@delete']);
+
+        /** Rosters */
+        Route::get('/rosters/create', ['as' => 'roster.create', 'uses' => 'RosterController@create']);
+        Route::get('/roster/edit/{id}', ['as' => 'roster.edit', 'uses' => 'RosterController@edit']);
+        Route::get('/roster/show/{id}', ['as' => 'roster.show', 'uses' => 'RosterController@show']);
+        Route::get('/roster/delete/{id}', ['as' => 'roster.delete', 'uses' => 'RosterController@delete']);
+
 	}); // END ADMIN GROUP
 
 	/**
@@ -96,6 +102,8 @@ Route::group(['before' => 'auth'], function() {
 	Route::get('/user/change-password', ['as' => 'user.edit.password',	'uses' => 'UserController@editPassword']); // Change password (GET)
 	Route::get('/user/show/{username}', ['as' => 'user.show', 'uses' => 'UserController@show']); // Show Profile (GET)
 	Route::get('/sign-out', ['as' => 'user.sign-out', 'uses' => 'UserController@getSignOut']); // Sign out (GET)
+
+    Route::get('/rosters/index', ['as' => 'rosters.index', 'uses' => 'RosterController@index']);
 }); // END AUTHENTICATED GROUP
 
 

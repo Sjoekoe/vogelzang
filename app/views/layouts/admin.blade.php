@@ -11,7 +11,7 @@
 	<div class="container-fluid">
 		<div class="row titleheader">
 			<div class="col-md-12">
-				<h3 class="pull-left">Stal de vogelzang - Administration panel </h3>
+				<h3 class="pull-left">Stal de vogelzang</h3>
 				<div class="pull-right">
 					<p>Ingelogd als {{  Auth::user()->username }} - {{ link_to_route('user.sign-out', 'Log uit') }} </p>
 				</div>

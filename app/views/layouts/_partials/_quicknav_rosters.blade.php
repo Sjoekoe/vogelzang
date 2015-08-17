@@ -16,7 +16,7 @@
                 <span class="glyphicon glyphicon-user"></span> Gebruikers
             </a>
         </li>
-        <li class="active">
+        <li >
             <a href=" {{ URL::route('contacts.index') }} ">
                 <span class="glyphicon glyphicon-envelope"></span> Berichten
             </a>
@@ -36,10 +36,17 @@
                 <span class="glyphicon glyphicon-font"></span> Lespony's
             </a>
         </li>
-        <li>
+        <li class="active">
             <a href="{{ route('rosters.index') }}">
                 <span class="glyphicon glyphicon-list"></span> Lessen
             </a>
+            <ul>
+                <li>
+                    <a href="{{ route('roster.create') }}">
+                        <span class="glyphicon glyphicon-plus"></span> Lesdag toevoegen
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </div> <!-- End col-md-2 quicknav -->

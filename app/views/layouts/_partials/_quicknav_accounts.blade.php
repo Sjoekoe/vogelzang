@@ -53,5 +53,10 @@
                 <span class="glyphicon glyphicon-font"></span> Lespony's
             </a>
         </li>
+        <li>
+            <a href="{{ route('rosters.index') }}">
+                <span class="glyphicon glyphicon-list"></span> Lessen
+            </a>
+        </li>
     </ul>
 </div> <!-- End col-md-2 quicknav -->
