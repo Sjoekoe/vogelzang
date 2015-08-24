@@ -11,4 +11,9 @@ class Pony extends \Eloquent
      * @var array
      */
     protected $fillable = ['name'];
+
+    public function lessons()
+    {
+        return $this->hasMany('Lesson');
+    }
 }

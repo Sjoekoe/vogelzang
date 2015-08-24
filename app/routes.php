@@ -40,6 +40,7 @@ Route::group(['before' => 'auth'], function() {
             Route::patch('/admin/ponies/edit/{id}', ['as' => 'pony.update', 'uses' => 'PonyController@update']);
             Route::post('/roster/create', ['as' => 'roster.store', 'uses' => 'RosterController@store']);
             Route::patch('/roster/edit/{id}', ['as' => 'roster.update', 'uses' => 'RosterController@update']);
+            Route::post('/roster/{roster}/lesson/create/{rider}', ['as' => 'lesson.create', 'uses' => 'LessonController@store']);
 		}); // END CSRF GROUP
 
 		Route::get('/admin', ['as' => 'admin.index', 'uses' => 'HomeController@admin']); // Admin Dashboard (GET)
@@ -85,8 +86,11 @@ Route::group(['before' => 'auth'], function() {
         /** Rosters */
         Route::get('/rosters/create', ['as' => 'roster.create', 'uses' => 'RosterController@create']);
         Route::get('/roster/edit/{id}', ['as' => 'roster.edit', 'uses' => 'RosterController@edit']);
-        Route::get('/roster/show/{id}', ['as' => 'roster.show', 'uses' => 'RosterController@show']);
         Route::get('/roster/delete/{id}', ['as' => 'roster.delete', 'uses' => 'RosterController@delete']);
+        Route::get('/roster/detail/{roster}/{hour}', ['as' => 'roster.detail', 'uses' => 'RosterController@detail']);
+
+        /** Lessons */
+        Route::get('lesson/delete/{lesson}', ['as' => 'lesson.delete', 'uses' => 'LessonController@delete']);
 
 	}); // END ADMIN GROUP
 
@@ -96,6 +100,9 @@ Route::group(['before' => 'auth'], function() {
 	Route::group(['before' => 'csrf'], function() {
 		Route::patch('/user/edit/{id}', ['as' => 'user.update', 'uses' => 'UserController@update']); // Update Profile (PATCH)
 		Route::patch('/user/change-password', ['as' => 'user.update.password',	'uses' => 'UserController@updatePassword']); // Change password (PATCH)
+        Route::post('/riders/create', ['as' => 'rider.store', 'uses' => 'RiderController@store']);
+        Route::patch('/riders/edit/{id}', ['as' => 'rider.update', 'uses' => 'RiderController@update']);
+        Route::post('/subscription/create/{roster}', ['as' => 'subscription.store', 'uses' => 'SubscriptionController@store']);
 	}); // END CSRF GROUP
 
 	Route::get('/user/edit', ['as' => 'user.edit',	'uses' => 'UserController@edit']); // Edit User
@@ -104,6 +111,13 @@ Route::group(['before' => 'auth'], function() {
 	Route::get('/sign-out', ['as' => 'user.sign-out', 'uses' => 'UserController@getSignOut']); // Sign out (GET)
 
     Route::get('/rosters/index', ['as' => 'rosters.index', 'uses' => 'RosterController@index']);
+    Route::get('/roster/show/{id}', ['as' => 'roster.show', 'uses' => 'RosterController@show']);
+    Route::get('/dashboard', ['as' => 'dashboard.index', 'uses' => 'dashboardController@index']);
+    Route::get('/riders/index', ['as' => 'riders.index', 'uses' => 'RiderController@index']);
+    Route::get('/riders/create', ['as' => 'rider.create', 'uses' => 'RiderController@create']);
+    Route::get('/riders/edit/{id}', ['as' => 'rider.edit', 'uses' => 'RiderController@edit']);
+    Route::get('/riders/delete{id}', ['as' => 'rider.delete', 'uses' => 'RiderController@delete']);
+    Route::get('/subscription/delete/{id}', ['as' => 'subscription.delete', 'uses' => 'SubscriptionController@delete']);
 }); // END AUTHENTICATED GROUP
 
 

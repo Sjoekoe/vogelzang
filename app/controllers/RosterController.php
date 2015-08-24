@@ -52,7 +52,31 @@ class RosterController extends \BaseController
      */
     public function show($id)
     {
+        $roster = Roster::findOrFail($id);
 
+        $riders = [];
+
+        foreach(Auth::user()->riders as $rider) {
+            if ($rider->hasNoSubscriptionForRoster($roster)) {
+                $subscriptions = $rider->subscriptions->toArray();
+
+                if (empty($subscriptions)) {
+                    array_push($riders, $rider);
+                } else {
+                    foreach ($subscriptions as $subscription) {
+                        if ($roster->id !== $subscription['roster_id']) {
+                            array_push($riders, $rider);
+                        }
+                    }
+                }
+            }
+        }
+
+        $lessons = $this->getLessonsHours($roster);
+
+        $ponies = Pony::orderBy('name')->lists('name', 'id');
+
+        return View::make('rosters.show', compact('roster', 'riders', 'ponies', 'lessons'));
     }
 
     /**
@@ -103,5 +127,38 @@ class RosterController extends \BaseController
         $roster->delete();
 
         return Redirect::route('rosters.index')->with('global', 'Lesdag verwijderd.');
+    }
+
+    /**
+     * @param int $roster
+     * @param int $hour
+     * @return \Illuminate\View\View
+     */
+    public function detail($roster, $hour)
+    {
+        $roster = Roster::findOrFail($roster);
+
+        $lessons = Lesson::where('roster_id', $roster->id)->where('hour', $hour)->get();
+
+        return View::make('rosters.detail', compact('roster', 'lessons', 'hour'));
+    }
+
+    /**
+     * @param \Roster $roster
+     * @return array
+     */
+    private function getLessonsHours(Roster $roster)
+    {
+        $lessons = Lesson::where('roster_id', $roster->id)->orderBy('hour', 'ASC')->get();
+
+        $result = [];
+
+        foreach ($lessons as $lesson) {
+            if (! in_array($lesson->hour, $result)) {
+                array_push($result, $lesson->hour);
+            }
+        }
+
+        return $result;
     }
 }

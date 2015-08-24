@@ -123,12 +123,23 @@ class AccountController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$user = User::findOrFail($id);
-		$user->username 	= Input::get('username');
-		$user->email 		= Input::get('email');
-		$user->first_name 	= Input::get('first_name');
-		$user->last_name	= Input::get('last_name');
-		$user->level_id		= Input::get('level_id');
+        $validator = Validator::make(Input::all(), [
+            'email' => 'required|email|max:50|unique:users,email' . $id,
+            'username' => 'required|max:20|min:3|unique:users,username,' . $id,
+        ]);
+
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->withErrors($validator);
+        }
+
+        $user = User::findOrFail($id);
+
+        $user->username 	= Input::get('username');
+        $user->email 		= Input::get('email');
+        $user->first_name 	= Input::get('first_name');
+        $user->last_name	= Input::get('last_name');
+        $user->level_id		= Input::get('level_id');
+
 		if ($user->save()) {
 			return Redirect::route('accounts.index', $user->id)->with('global', 'De gegevens zijn aangepast');
 		}

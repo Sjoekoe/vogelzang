@@ -3,7 +3,8 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent implements UserInterface, RemindableInterface
+{
 
 	protected $guarded = ['id', 'created_at', 'updated_at'];
 	protected $fillable = ['email', 'username', 'first_name', 'last_name', 'password', 'password_temp', 'level_id', 'active', 'code'];
@@ -22,9 +23,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = ['password'];
 
-	public function level() {
+    /**
+     * @return mixed
+     */
+    public function level() {
 		return $this->hasOne('Level', 'id', 'level_id');
 	}
+
+    public function riders()
+    {
+        return $this->hasMany('Rider');
+    }
 		
 	/**
 	 * Get the unique identifier for the user.
@@ -87,16 +96,25 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+    /**
+     * @return bool
+     */
     public function isAdmin()
     {
         return $this->level_id == 3;
     }
 
+    /**
+     * @return bool
+     */
     public function isModerator()
     {
         return $this->level_id == 2;
     }
 
+    /**
+     * @return bool
+     */
     public function hasPrivileges()
     {
         return $this->level_id > 1;

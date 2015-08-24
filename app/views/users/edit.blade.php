@@ -1,7 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
-    @include('layouts._partials._quicknav_accounts')
+    @if (Auth::user()->isAdmin())
+        @include('layouts._partials._quicknav_accounts')
+    @else
+        @include('layouts._partials._users._sidebar')
+    @endif
 
 	<div class="col-md-8 col-md-offset-1 truecontent">
 		<h3>Wijzig uw gegevens</h3>

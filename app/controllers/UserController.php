@@ -77,11 +77,13 @@ class UserController extends \BaseController {
 	public function edit()
 	{	
 		$user = User::find(Auth::user()->id);
+
 		return View::make('users.edit', compact('user'));
 	}
 
 	public function editPassword() {
 		$user = User::find(Auth::user()->id);
+
 		return View::make('users.editPassword', compact('user'));
 	}
 
@@ -94,10 +96,19 @@ class UserController extends \BaseController {
 	 */
 	public function update()
 	{
+        $validator = Validator::make(Input::all(), [
+            'email' => 'required|email|max:50|unique:users,email,' . Auth::user()->id,
+            'username' => 'required|max:20|min:3|unique:users,username,' . Auth::user()->id,
+        ]);
 
-		$user = User::findOrFail(Auth::user()->id);
-		$user->fill(Input::all());
-		$user->save();
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->withErrors($validator);
+        }
+
+        $user = User::findOrFail(Auth::user()->id);
+        $user->fill(Input::all());
+        $user->save();
+
 		return Redirect::route('user.edit')->with('global', 'Je gegevens zijn aangepast');
 	}
 
@@ -169,8 +180,11 @@ class UserController extends \BaseController {
 			), $remember);
 
 			if ($auth) {
-				// Redirect to the intended page
-				return Redirect::intended('/admin')->with('global', 'Je bent nu ingelogd');
+                if (Auth::user()->isAdmin()) {
+                    return Redirect::intended('/admin')->with('global', 'Je bent nu ingelogd');
+                } else {
+                    return Redirect::intended('/dashboard')->with('global', 'Je bent nu ingelogd');
+                }
 			} else {
 				return Redirect::route('user.sign-in')->with('global', 'Gebruikersnaam/wachtwoord incorrect, Of uw account is nog niet geactiveerd.');
 			}
