@@ -75,7 +75,7 @@ class UserController extends \BaseController {
 	 * @return Response
 	 */
 	public function edit()
-	{	
+	{
 		$user = User::find(Auth::user()->id);
 
 		return View::make('users.edit', compact('user'));
@@ -132,7 +132,11 @@ class UserController extends \BaseController {
 				$user->password = Hash::make($password);
 
 				if ($user->save()) {
-					return Redirect::route('admin.index')->with('global', 'Wachtwoord is gewijzigd');
+					if ($user->isAdmin()) {
+						return Redirect::route('admin.index')->with('global', 'Wachtwoord is gewijzigd');
+					} else {
+						return Redirect::route('dashboard.index')->with('global', 'Wachtwoord is geweizigd');
+					}
 				} else {
 					return Redirect::route('user.edit.password')->with('global', 'Het oude wachtwoord is incorrect');
 				}
@@ -158,7 +162,7 @@ class UserController extends \BaseController {
 	}
 
 	public function postSignin() {
-		$validator = Validator::make(Input::all(), 
+		$validator = Validator::make(Input::all(),
 			array(
 				'username' => 'required',
 				'password' => 'required'
@@ -203,7 +207,7 @@ class UserController extends \BaseController {
 	}
 
 	public function postRecoverPassword() {
-		$validator = Validator::make(Input::all(), 
+		$validator = Validator::make(Input::all(),
 			array(
 				'email' => 'required|email'
 			)

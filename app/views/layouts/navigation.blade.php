@@ -14,8 +14,13 @@
 				@if (Auth::user()->level_id > 1)
 					<li> <a href=" {{ URL::route('admin.index') }} ">Admin panel</a> </li>
 				@endif
+				@if (Auth::user()->level_id = 1)
+                    <li>
+                        <a href="{{ route('dashboard.index') }}">User Panel</a>
+                    </li>
+                @endif
 				<li> <a href=" {{ URL::route('user.sign-out') }} ">Log uit</a> </li>
-				
+
 			@else
 				<li> <a href=" {{ URL::route('user.sign-in') }} ">Leden</a> </li>
 			@endif
