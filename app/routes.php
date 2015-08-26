@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Acces for everybody
@@ -112,7 +112,7 @@ Route::group(['before' => 'auth'], function() {
 
     Route::get('/rosters/index', ['as' => 'rosters.index', 'uses' => 'RosterController@index']);
     Route::get('/roster/show/{id}', ['as' => 'roster.show', 'uses' => 'RosterController@show']);
-    Route::get('/dashboard', ['as' => 'dashboard.index', 'uses' => 'dashboardController@index']);
+    Route::get('/dashboard', ['as' => 'dashboard.index', 'uses' => 'DashboardController@index']);
     Route::get('/riders/index', ['as' => 'riders.index', 'uses' => 'RiderController@index']);
     Route::get('/riders/create', ['as' => 'rider.create', 'uses' => 'RiderController@create']);
     Route::get('/riders/edit/{id}', ['as' => 'rider.edit', 'uses' => 'RiderController@edit']);
