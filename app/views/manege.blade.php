@@ -64,11 +64,6 @@
 									</a>
 								</li>
 								<li>
-									<a href=" {{ URL::to('images/manege/manege4.jpg') }} " rel="gallery" title="manege4" class="lightbox">
-										{{ HTML::image('images/manege/manege4.jpg') }}
-									</a>
-								</li>
-								<li>
 									<a href=" {{ URL::to('images/manege/manege5.jpeg') }} " rel="gallery" title="manege5" class="lightbox">
 										{{ HTML::image('images/manege/manege5.jpeg') }}
 									</a>

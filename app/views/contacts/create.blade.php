@@ -67,7 +67,6 @@
 								<div class="phone col-md-12 col-sm-3">
 									<h4>Telefoon</h4>
 									<p><a href="tel:+32475295760"> +32 (0) 475.29.57.60</a></p>
-									<p><a href="tel:+32476881184"> +32 (0) 476.88.11.84</a></p>
 								</div> <!-- End phone -->
 								<div class="mail col-md-12 col-sm-3">
 									<h4>Mail</h4>
