@@ -9,24 +9,10 @@
 
     <div class="col-md-8 col-md-offset-1 truecontent">
         <div class="row">
-            <h3>{{ Lang::get('days.names')[$roster->name] . ' ' . date('d/m/Y', strtotime($roster->date)) . ' (' . Lang::get('rosters')[$roster->type] . ')' }}</h3>
+            <h3>{{ Lang::get('days.names')[$roster->name] . ' ' . date('d/m/Y', strtotime($roster->date)) . ' - ' . Lang::get('days.hours')[$roster->hour] . ' (' . Lang::get('rosters')[$roster->type] . ')' }}</h3>
             <div class="overview">
                 <p>{{ nl2br($roster->description) }}</p>
                 <hr/>
-
-                @if (Auth::user()->isAdmin() && count($lessons))
-                    <h3>Roosters</h3>
-                    <p>
-                        @foreach ($lessons as $lesson)
-                            <span class="col-md-1">
-                                <a href="{{ route('roster.detail', [$roster->id, $lesson]) }}">
-                                    {{ Lang::get('days.hours')[$lesson] }}
-                                </a>
-                            </span>
-                        @endforeach
-                    </p>
-                    <hr/>
-                @endif
 
                 <h3>Ingeschreven ruiters</h3>
                 @foreach ($roster->subscriptions as $subscription)
@@ -41,12 +27,23 @@
                                     {{ Form::select('pony', $ponies, '', ['class' => 'form-control']) }}
                                 </div>
                                 <div class="col-md-2">
-                                    {{ Form::select('hour', Lang::get('days.hours'), '', ['class' => 'form-control']) }}
-                                </div>
-                                <div class="col-md-2">
                                     {{ Form::submit('Inschrijven', ['class' => 'btn btn-custom']) }}
                                 </div>
                             {{ Form::close() }}
+                        </div>
+                    @elseif(Auth::user()->isAdmin() && ! $subscription->rider->hasNoLessonForRoster($roster))
+                        <div class="row">
+                            <div class="col-md-2">
+                                {{ $subscription->rider->fullName() }}
+                            </div>
+                            <div class="col-md-2">
+                                {{ $subscription->lesson()->pony->name }}
+                            </div>
+                            <div class="col-md-2">
+                                <a href="{{ route('lesson.delete', $subscription->lesson()->id) }}">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                            </div>
                         </div>
                     @endif
                 @endforeach
@@ -57,7 +54,6 @@
                             <thead>
                             <tr>
                                 <th>Ruiter</th>
-                                <th>Uur</th>
                                 <th>Pony</th>
                                 <th></th>
                             </tr>
@@ -72,7 +68,6 @@
                                     @if ($subscription->rider->user->id == Auth::user()->id)
                                         <tr>
                                             <td>{{ $subscription->rider->fullName() }}</td>
-                                            <td>{{ $subscription->lesson() ? Lang::get('days.hours')[$subscription->lesson()->hour] : '' }}</td>
                                             <td>{{ $subscription->lesson() ? $subscription->lesson()->pony->name : '' }}</td>
                                             <td>
                                                 <a href="{{ route('subscription.delete', $subscription->id) }}">

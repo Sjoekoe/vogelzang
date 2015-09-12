@@ -12,6 +12,10 @@
  	color: white;
  }
 
+ a.underlined {
+     text-decoration: underline;
+ }
+
  .titleheader a {
      color: #FFFFFF;
  }

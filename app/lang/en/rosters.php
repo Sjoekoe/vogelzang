@@ -6,4 +6,6 @@ return [
     3 => 'Privé-les',
     4 => 'Springles',
     5 => 'Wandeling',
+    6 => 'Dressuurles voor gevorderden',
+    7 => 'Springles voor gevorderden',
 ];

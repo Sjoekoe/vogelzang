@@ -17,13 +17,18 @@
         </div>
         <!-- Name Form input -->
         <div class="form-group">
-            {{ Form::label('date', 'Date:', ['class' => 'control-label']) }}
+            {{ Form::label('date', 'Datum:', ['class' => 'control-label']) }}
             <div class="controls">
                 {{ Form::text('date', null, ['class' => 'form-control', 'placeholder' => 'dd/mm/YYYY']) }}
                 @if ($errors->has('date'))
                     <span> {{ $errors->first('date') }} </span>
                 @endif
             </div>
+        </div>
+
+        <div class="form-group">
+            {{ Form::label('hour', 'Uur:', ['class' => 'control-label']) }}
+            {{ Form::select('hour', Lang::get('days.hours'), null, ['class' => 'form-control']) }}
         </div>
 
         <div class="form-group">

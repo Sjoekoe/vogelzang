@@ -5,7 +5,7 @@ class Roster extends \Eloquent
     /**
      * @var array
      */
-    protected $fillable = ['date', 'type', 'name', 'description'];
+    protected $fillable = ['date', 'type', 'name', 'description', 'hour'];
 
     /**
      * @return Subscription[]
