@@ -5,7 +5,7 @@ class Lesson extends \Eloquent
     /**
      * @var array
      */
-    protected $fillable = ['roster_id', 'rider_id', 'hour', 'pony_id'];
+    protected $fillable = ['roster_id', 'rider_id', 'pony_id'];
 
     public function roster()
     {

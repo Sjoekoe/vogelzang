@@ -16,7 +16,6 @@ class LessonController extends \BaseController
             'roster_id' => $roster->id,
             'rider_id' => $rider->id,
             'pony_id' => Input::get('pony'),
-            'hour' => Input::get('hour'),
         ]);
 
         return Redirect::route('roster.show', $roster->id)->with('global', 'Les aangemaakt');

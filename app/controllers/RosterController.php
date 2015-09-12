@@ -41,6 +41,7 @@ class RosterController extends \BaseController
             'name' => input::get('name'),
             'date' => DateTime::createFromFormat('d/m/Y', Input::get('date')),
             'type' => Input::get('type'),
+            'hour' => Input::get('hour'),
             'description' => Input::get('description'),
         ]);
 
@@ -58,25 +59,13 @@ class RosterController extends \BaseController
 
         foreach(Auth::user()->riders as $rider) {
             if ($rider->hasNoSubscriptionForRoster($roster)) {
-                $subscriptions = $rider->subscriptions->toArray();
-
-                if (empty($subscriptions)) {
-                    array_push($riders, $rider);
-                } else {
-                    foreach ($subscriptions as $subscription) {
-                        if ($roster->id !== $subscription['roster_id']) {
-                            array_push($riders, $rider);
-                        }
-                    }
-                }
+                array_push($riders, $rider);
             }
         }
 
-        $lessons = $this->getLessonsHours($roster);
-
         $ponies = Pony::orderBy('name')->lists('name', 'id');
 
-        return View::make('rosters.show', compact('roster', 'riders', 'ponies', 'lessons'));
+        return View::make('rosters.show', compact('roster', 'riders', 'ponies'));
     }
 
     /**
@@ -111,6 +100,7 @@ class RosterController extends \BaseController
         $roster->date = DateTime::createFromFormat('d/m/Y', Input::get('date'));
         $roster->type = Input::get('type');
         $roster->description = Input::get('description');
+        $roster->hour = Input::get('hour');
         $roster->save();
 
         return Redirect::route('rosters.index')->with('global','Lesdag aangepast');
@@ -141,24 +131,5 @@ class RosterController extends \BaseController
         $lessons = Lesson::where('roster_id', $roster->id)->where('hour', $hour)->get();
 
         return View::make('rosters.detail', compact('roster', 'lessons', 'hour'));
-    }
-
-    /**
-     * @param \Roster $roster
-     * @return array
-     */
-    private function getLessonsHours(Roster $roster)
-    {
-        $lessons = Lesson::where('roster_id', $roster->id)->orderBy('hour', 'ASC')->get();
-
-        $result = [];
-
-        foreach ($lessons as $lesson) {
-            if (! in_array($lesson->hour, $result)) {
-                array_push($result, $lesson->hour);
-            }
-        }
-
-        return $result;
     }
 }

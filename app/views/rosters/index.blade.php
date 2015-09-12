@@ -31,7 +31,7 @@
                     @foreach ($rosters as $roster)
                         <tr>
                             <td>
-                                {{ Lang::get('days.names')[$roster->name] . ' ' . date('d/m/Y', strtotime($roster->date)) . ' (' . Lang::get('rosters')[$roster->type] . ')' }}
+                                {{ Lang::get('days.names')[$roster->name] . ' ' . date('d/m/Y', strtotime($roster->date)) . ' - ' . Lang::get('days.hours')[$roster->hour] . ' (' . Lang::get('rosters')[$roster->type] . ')' }}
                                 @if (Auth::user()->isAdmin())
                                     - {{ count($roster->subscriptions) }} inschrijvingen
                                 @endif
