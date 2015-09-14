@@ -15,15 +15,15 @@
                 <tr>
                     <th>Datum</th>
                     @if (Auth::user()->isAdmin())
-                        <th colspan="4"></th>
+                        <th colspan="7"></th>
                     @else
-                        <th colspan="3"></th>
+                        <th colspan="5"></th>
                     @endif
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <td colspan="4"> {{ $rosters->links() }} </td>
+                    <td colspan="{{ Auth::user()->isAdmin() ? 7 : 5 }}"> {{ $rosters->links() }} </td>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -31,11 +31,19 @@
                     @foreach ($rosters as $roster)
                         <tr>
                             <td>
-                                {{ Lang::get('days.names')[$roster->name] . ' ' . date('d/m/Y', strtotime($roster->date)) . ' - ' . Lang::get('days.hours')[$roster->hour] . ' (' . Lang::get('rosters')[$roster->type] . ')' }}
-                                @if (Auth::user()->isAdmin())
-                                    - {{ count($roster->subscriptions) }} inschrijvingen
-                                @endif
+                                {{ Lang::get('days.names')[$roster->name] . ' ' . date('d/m/Y', strtotime($roster->date)) }}
                             </td>
+                            <td>
+                                {{ Lang::get('days.hours')[$roster->hour] }}
+                            </td>
+                            <td>
+                                {{ Lang::get('rosters')[$roster->type] }}
+                            </td>
+                            @if (Auth::user()->isAdmin())
+                                <td>
+                                    {{ count($roster->subscriptions) }} inschrijvingen
+                                </td>
+                            @endif
                             @if (Auth::user()->isAdmin())
                                 <td><a href="{{ route('roster.show', $roster->id) }}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
                                 <td> <a href="{{ route('roster.edit', $roster->id) }}"> <span class="glyphicon glyphicon-pencil"></span> </a> </td>
@@ -48,7 +56,7 @@
                     @endforeach
                 @else
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             Nog geen lessen beschikbaar
                         </td>
                     </tr>
