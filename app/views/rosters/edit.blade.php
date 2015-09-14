@@ -24,6 +24,11 @@
         </div>
 
         <div class="form-group">
+            {{ Form::label('hour', 'Uur:', ['class' => 'control-label']) }}
+            {{ Form::select('hour', Lang::get('days.hours'), $roster->hour, ['class' => 'form-control']) }}
+        </div>
+
+        <div class="form-group">
             {{ Form::label('type', 'Soort les') }}
             {{ Form::select('type', Lang::get('rosters'), $roster->type, ['class' => 'form-control']) }}
         </div>

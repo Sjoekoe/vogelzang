@@ -38,7 +38,7 @@ class RosterController extends \BaseController
         }
 
         Roster::create([
-            'name' => input::get('name'),
+            'name' => Input::get('name'),
             'date' => DateTime::createFromFormat('d/m/Y', Input::get('date')),
             'type' => Input::get('type'),
             'hour' => Input::get('hour'),
