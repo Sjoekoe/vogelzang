@@ -34,9 +34,11 @@
                                         <tr>
                                             <td>{{ $subscription->rider->fullName() }}</td>
                                             <td>
-                                                <a href="{{ route('subscription.delete', $subscription->id) }}">
-                                                    <span class="glyphicon glyphicon-trash"></span>
-                                                </a>
+                                                @if ($roster->canStillBeCanceled())
+                                                    <a href="{{ route('subscription.delete', $subscription->id) }}">
+                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                    </a>
+                                                @endif
                                             </td>
 
                                         </tr>

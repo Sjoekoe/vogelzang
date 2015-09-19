@@ -38,6 +38,10 @@ class SubscriptionController extends \BaseController
 
         $rosterId = $subscription->roster->id;
 
+        if ($subscription->cannotBeCanceled()) {
+            return Redirect::route('roster.show', $rosterId)->with('global', 'Je kan je niet meer uitschrijven voor deze les.');
+        }
+
         if ($subscription->lesson()) {
             $subscription->lesson()->delete();
         }
