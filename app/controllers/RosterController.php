@@ -10,7 +10,15 @@ class RosterController extends \BaseController
         $today = new \DateTime();
         $today->sub(new \DateInterval('P1D'));
 
-        $rosters = Roster::where('date', '>', $today)->orderBy('date')->paginate(15);
+        if (Auth::user()->isAdmin()) {
+            $rosters = Roster::where('date', '>', $today)->orderBy('date')->paginate(15);
+        } else {
+            $future = new \DateTime();
+            $future->add(new \DateInterval('P14D'));
+
+            $rosters = Roster::where('date', '>', $today)->where('date', '<', $future)->orderBy('date')->paginate(15);
+        }
+
 
         return View::make('rosters.index', compact('rosters'));
     }
