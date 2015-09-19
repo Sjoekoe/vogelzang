@@ -33,6 +33,14 @@
             {{ Form::select('type', Lang::get('rosters'), $roster->type, ['class' => 'form-control']) }}
         </div>
 
+        <div class="form-group">
+            {{ Form::label('limit', 'Limiet:') }}
+            {{ Form::text('limit', $roster->limit, ['class' => 'form-control']) }}
+            @if ($errors->has('limit'))
+                <span>{{ $errors->first('limit') }}</span>
+            @endif
+        </div>
+
         <!-- Description Form input -->
         <div class="form-group">
             {{ Form::label('description', 'Opmerking:') }}

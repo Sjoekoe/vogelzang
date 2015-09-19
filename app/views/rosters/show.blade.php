@@ -15,60 +15,24 @@
                 <hr/>
 
                 <h3>Ingeschreven ruiters</h3>
-                @foreach ($roster->subscriptions as $subscription)
-                    @if (Auth::user()->isAdmin() && $subscription->rider->hasNoLessonForRoster($roster))
-                        <div class="row">
-                            {{ Form::open(['route' => ['lesson.create', $roster->id, $subscription->rider->id]]) }}
-                                {{ Form::hidden('rider', $subscription->rider->id) }}
-                                <div class="col-md-2">
-                                    {{ Form::label('', $subscription->rider->fullName()) }}
-                                </div>
-                                <div class="col-md-2">
-                                    {{ Form::select('pony', $ponies, '', ['class' => 'form-control']) }}
-                                </div>
-                                <div class="col-md-2">
-                                    {{ Form::submit('Inschrijven', ['class' => 'btn btn-custom']) }}
-                                </div>
-                            {{ Form::close() }}
-                        </div>
-                    @elseif(Auth::user()->isAdmin() && ! $subscription->rider->hasNoLessonForRoster($roster))
-                        <div class="row">
-                            <div class="col-md-2">
-                                {{ $subscription->rider->fullName() }}
-                            </div>
-                            <div class="col-md-2">
-                                {{ $subscription->lesson()->pony->name }}
-                            </div>
-                            <div class="col-md-2">
-                                <a href="{{ route('lesson.delete', $subscription->lesson()->id) }}">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </a>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-
-                @if (! Auth::user()->isAdmin())
                     <div class="panel panel-default">
                         <table class="table table-striped">
                             <thead>
                             <tr>
                                 <th>Ruiter</th>
-                                <th>Pony</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
-                                <td colspan="4">  </td>
+                                <td colspan="3">  </td>
                             </tr>
                             </tfoot>
                             <tbody>
                                 @foreach ($roster->subscriptions as $subscription)
-                                    @if ($subscription->rider->user->id == Auth::user()->id)
+                                    @if (Auth::user()->isAdmin() || $subscription->rider->user->id == Auth::user()->id)
                                         <tr>
                                             <td>{{ $subscription->rider->fullName() }}</td>
-                                            <td>{{ $subscription->lesson() ? $subscription->lesson()->pony->name : '' }}</td>
                                             <td>
                                                 <a href="{{ route('subscription.delete', $subscription->id) }}">
                                                     <span class="glyphicon glyphicon-trash"></span>
@@ -81,12 +45,11 @@
                             </tbody>
                         </table>
                     </div> <!-- End panel -->
-                @endif
                 <hr/>
             </div>
         </div>
 
-        @if (count($riders) && ! Auth::user()->isAdmin())
+        @if (count($riders) && ! Auth::user()->isAdmin() && $roster->stillHasPlace())
             <div class="row">
                 <h3>Inschrijven</h3>
                 {{ Form::open(['route' => ['subscription.store', $roster->id]]) }}
@@ -108,6 +71,14 @@
                 </div>
                 {{ Form::close() }}
             </div>
+        @else
+            @if (! Auth::user()->isAdmin())
+                <div class="row">
+                    <div class="col-md-9">
+                        <p>Onze excuses, maar deze les is reeds volgeboekt.</p>
+                    </div>
+                </div>
+            @endif
         @endif
     </div> <!-- End truecontent -->
 @stop

@@ -10,11 +10,19 @@ class SubscriptionController extends \BaseController
     {
         $roster = Roster::findOrFail($roster);
 
+        $count = count($roster->subscriptions);
+
         foreach (Input::get('riders') as $rider) {
-            Subscription::create([
-                'roster_id' => $roster->id,
-                'rider_id' => $rider ,
-            ]);
+            if ($count <= $roster->limit) {
+                Subscription::create([
+                    'roster_id' => $roster->id,
+                    'rider_id' => $rider ,
+                ]);
+
+                $count ++;
+            } else {
+                return Redirect::route('roster.show', $roster->id)->with('global', 'De les zit reeds vol');
+            }
         }
 
         return Redirect::route('roster.show', $roster->id)->with('global', 'Ingeschreven!');

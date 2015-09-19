@@ -14,16 +14,15 @@
                 <thead>
                 <tr>
                     <th>Datum</th>
-                    @if (Auth::user()->isAdmin())
-                        <th colspan="7"></th>
-                    @else
-                        <th colspan="5"></th>
-                    @endif
+                    <th>Uur</th>
+                    <th>Les</th>
+                    <th>Inschrijvingen</th>
+                    <th colspan="3"></th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <td colspan="{{ Auth::user()->isAdmin() ? 7 : 5 }}"> {{ $rosters->links() }} </td>
+                    <td colspan="7"> {{ $rosters->links() }} </td>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -39,11 +38,9 @@
                             <td>
                                 {{ Lang::get('rosters')[$roster->type] }}
                             </td>
-                            @if (Auth::user()->isAdmin())
-                                <td>
-                                    {{ count($roster->subscriptions) }} inschrijvingen
-                                </td>
-                            @endif
+                            <td>
+                                {{ count($roster->subscriptions) . '/' . $roster->limit }}
+                            </td>
                             @if (Auth::user()->isAdmin())
                                 <td><a href="{{ route('roster.show', $roster->id) }}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
                                 <td> <a href="{{ route('roster.edit', $roster->id) }}"> <span class="glyphicon glyphicon-pencil"></span> </a> </td>

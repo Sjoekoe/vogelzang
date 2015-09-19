@@ -30,7 +30,8 @@ class RosterController extends \BaseController
     {
         $validator = Validator::make(Input::all(), [
             'name' => 'required',
-            'date' => 'required|date_format:d/m/Y'
+            'date' => 'required|date_format:d/m/Y',
+            'limit' => 'integer|min:0'
         ]);
 
         if ($validator->fails()) {
@@ -42,6 +43,7 @@ class RosterController extends \BaseController
             'date' => DateTime::createFromFormat('d/m/Y', Input::get('date')),
             'type' => Input::get('type'),
             'hour' => Input::get('hour'),
+            'limit' => Input::get('limit'),
             'description' => Input::get('description'),
         ]);
 
@@ -89,7 +91,8 @@ class RosterController extends \BaseController
 
         $validator = Validator::make(Input::all(), [
             'name' => 'required',
-            'date' => 'required|date_format:d/m/Y'
+            'date' => 'required|date_format:d/m/Y',
+            'limit' => 'integer|min:0',
         ]);
 
         if ($validator->fails()) {
@@ -101,6 +104,7 @@ class RosterController extends \BaseController
         $roster->type = Input::get('type');
         $roster->description = Input::get('description');
         $roster->hour = Input::get('hour');
+        $roster->limit = Input::get('limit');
         $roster->save();
 
         return Redirect::route('rosters.index')->with('global','Lesdag aangepast');
