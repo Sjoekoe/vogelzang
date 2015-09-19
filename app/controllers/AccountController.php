@@ -169,6 +169,4 @@ class AccountController extends \BaseController {
 
 		return Redirect::route('accounts.index')->with('global', 'Deze gebruiker kon niet worden verwijderd.');
 	}
-
-
 }

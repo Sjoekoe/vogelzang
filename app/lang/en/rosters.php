@@ -1,11 +1,11 @@
 <?php
 
 return [
-    1 => 'Dressuurles',
+    1 => 'Groepsles',
     2 => 'Ouderles',
     3 => 'Privé-les',
     4 => 'Springles',
     5 => 'Wandeling',
-    6 => 'Dressuurles voor gevorderden',
+    6 => 'Dressuurles',
     7 => 'Springles voor gevorderden',
 ];

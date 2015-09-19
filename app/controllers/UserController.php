@@ -2,18 +2,7 @@
 
 class UserController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
-
-
-	/**
+    /**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
@@ -28,24 +17,13 @@ class UserController extends \BaseController {
 			$user->active 	= 1;
 			$user->code 	= '';
 			if ($user->save()) {
-				return 	Redirect::route('home')
+				return 	Redirect::route('user.sign-in')
 						->with('global', 'Geactiveerd, U kan nu gebruik maken van onze leden pagina. Veel plezier.');
 			}
 		}
 
 		return 	Redirect::route('home')
 				->with('global', 'Er is een fout opgetreden bij het activeren van uw account. Probeer later nog eens.')	;
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
 	}
 
 
@@ -135,7 +113,7 @@ class UserController extends \BaseController {
 					if ($user->isAdmin()) {
 						return Redirect::route('admin.index')->with('global', 'Wachtwoord is gewijzigd');
 					} else {
-						return Redirect::route('dashboard.index')->with('global', 'Wachtwoord is geweizigd');
+						return Redirect::route('dashboard.index')->with('global', 'Wachtwoord is gewijzigd');
 					}
 				} else {
 					return Redirect::route('user.edit.password')->with('global', 'Het oude wachtwoord is incorrect');
@@ -261,6 +239,4 @@ class UserController extends \BaseController {
 
 		return Redirect::route('home')->with('global', 'We hebben u account niet kunnen herstellen');
 	}
-
-
 }
