@@ -28,8 +28,8 @@ class DashboardController extends \BaseController
         $today->sub(new \DateInterval('P1D'));
 
         foreach(Auth::user()->riders as $rider) {
-            $lessons = Lesson::where('lessons.rider_id',  $rider->id)
-                ->join('rosters', 'rosters.id', '=', 'lessons.roster_id')
+            $lessons = Subscription::where('subscriptions.rider_id',  $rider->id)
+                ->join('rosters', 'rosters.id', '=', 'subscriptions.roster_id')
                 ->where('rosters.date', '>', $today)
                 ->orderBy('rosters.date')
                 ->get();
@@ -37,7 +37,6 @@ class DashboardController extends \BaseController
             foreach ($lessons as $lesson) {
                 $result[$rider->fullName()][] = [
                     'roster' => Lang::get('days.names')[$lesson->roster->name] . ' ' . date('d/m/Y', strtotime($lesson->roster->date)) . ' - ' . Lang::get('days.hours')[$lesson->roster->hour] . ' (' . Lang::get('rosters')[$lesson->roster->type] . ')',
-                    'pony' => $lesson->pony->name,
                 ];
             }
         }
