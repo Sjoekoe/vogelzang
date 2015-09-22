@@ -77,7 +77,7 @@
             @if (! Auth::user()->isAdmin())
                 <div class="row">
                     <div class="col-md-9">
-                        <p>Onze excuses, maar deze les is reeds volgeboekt.</p>
+                        <p>Onze excuses, maar deze les is reeds volgeboekt, of al je ruiters zijn reeds ingeschreven.</p>
                     </div>
                 </div>
             @endif
