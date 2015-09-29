@@ -16,7 +16,7 @@ class RosterController extends \BaseController
             $future = new \DateTime();
             $future->add(new \DateInterval('P14D'));
 
-            $rosters = Roster::where('date', '>', $today)->where('date', '<', $future)->orderBy('date')->paginate(15);
+            $rosters = Roster::where('date', '>', $today)->where('date', '<', $future)->orderBy('date')->orderBy('hour')->paginate(15);
         }
 
 

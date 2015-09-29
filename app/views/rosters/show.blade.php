@@ -73,11 +73,17 @@
                 </div>
                 {{ Form::close() }}
             </div>
+        @elseif (! $roster->stillHasPlace() && ! Auth::user()->isAdmin())
+            <div class="row">
+                <div class="col-md-9">
+                    <p>Onze excuses, maar deze les is reeds volgeboekt.</p>
+                </div>
+            </div>
         @else
             @if (! Auth::user()->isAdmin())
                 <div class="row">
                     <div class="col-md-9">
-                        <p>Onze excuses, maar deze les is reeds volgeboekt, of al je ruiters zijn reeds ingeschreven.</p>
+                        <p>Al je ruiters zijn reeds ingeschreven, of je hebt er nog geen aangemaakt.</p>
                     </div>
                 </div>
             @endif
