@@ -15,12 +15,16 @@
                 <tr>
                     <th></th>
                     <th>Naam</th>
-                    <th colspan="2"></th>
+                    <th colspan="2">
+                        @if (Auth::user()->isAdmin())
+                            {{ $riderCount . ' ruiters' }}
+                        @endif
+                    </th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <td colspan="4">  </td>
+                    <td colspan="4"> {{ $riders->links() }} </td>
                 </tr>
                 </tfoot>
                 <tbody>

@@ -8,12 +8,13 @@ class RiderController extends \BaseController
     public function index()
     {
         if (Auth::user()->isAdmin()) {
+            $riderCount = count(Rider::all());
             $riders = Rider::orderBy('firstname', 'ASC')->paginate(20);
         } else {
             $riders = Rider::where('user_id', Auth::user()->id)->get();
         }
 
-        return View::make('riders.index', compact('riders'));
+        return View::make('riders.index', compact('riders', 'riderCount'));
     }
 
     /**
