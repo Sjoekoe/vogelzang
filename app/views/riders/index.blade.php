@@ -1,7 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
-    @include('layouts._partials._users._sidebar')
+    @if (Auth::user()->isAdmin())
+        @include('layouts._partials._quicknav_riders')
+    @else
+        @include('layouts._partials._users._sidebar')
+    @endif
 
     <div class="col-md-8 col-md-offset-1 truecontent">
         <h3>Ruiters</h3>
@@ -39,8 +43,10 @@
                 </tbody>
             </table>
         </div> <!-- End panel -->
-        <div class="overview">
-            <a href="{{ route('rider.create') }}"> <span class="glyphicon glyphicon-plus"></span> Ruiter toevoegen </a>
-        </div>
+        @if (! Auth::user()->isAdmin())
+            <div class="overview">
+                <a href="{{ route('rider.create') }}"> <span class="glyphicon glyphicon-plus"></span> Ruiter toevoegen </a>
+            </div>
+        @endif
     </div> <!-- End truecontent -->
 @stop

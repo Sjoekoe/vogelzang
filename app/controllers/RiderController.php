@@ -7,7 +7,11 @@ class RiderController extends \BaseController
      */
     public function index()
     {
-        $riders = Rider::where('user_id', Auth::user()->id)->get();
+        if (Auth::user()->isAdmin()) {
+            $riders = Rider::orderBy('firstname', 'ASC')->paginate(20);
+        } else {
+            $riders = Rider::where('user_id', Auth::user()->id)->get();
+        }
 
         return View::make('riders.index', compact('riders'));
     }
@@ -99,7 +103,7 @@ class RiderController extends \BaseController
     {
         $rider = Rider::findOrFail($id);
 
-        if ($rider->user_id !== Auth::user()->id) {
+        if ($rider->user_id !== Auth::user()->id || ! Auth::user()->isAdmin()) {
             App::abort(403);
         }
 

@@ -31,24 +31,17 @@
                 <span class="glyphicon glyphicon-pencil"></span> Nieuws
             </a>
         </li>
-        <li class="active">
+        <li>
             <a href="{{ route('ponys.index') }}">
                 <span class="glyphicon glyphicon-font"></span> Lespony's
             </a>
-            <ul>
-                <li>
-                    <a href="{{ route('pony.create') }}">
-                        <span class="glyphicon glyphicon-plus"></span> Pony toevoegen
-                    </a>
-                </li>
-            </ul>
         </li>
         <li>
             <a href="{{ route('rosters.index') }}">
                 <span class="glyphicon glyphicon-list"></span> Lessen
             </a>
         </li>
-        <li>
+        <li class="active">
             <a href="{{ route('riders.index') }}">
                 <span class="glyphicon glyphicon-font"></span> Ruiters
             </a>

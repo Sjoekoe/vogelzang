@@ -58,5 +58,10 @@
                 <span class="glyphicon glyphicon-list"></span> Lessen
             </a>
         </li>
+        <li>
+            <a href="{{ route('riders.index') }}">
+                <span class="glyphicon glyphicon-font"></span> Ruiters
+            </a>
+        </li>
     </ul>
 </div> <!-- End col-md-2 quicknav -->
