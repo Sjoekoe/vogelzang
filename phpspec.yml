@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Vogelzang
+        psr4_prefix: Vogelzang
+        src_path: app
