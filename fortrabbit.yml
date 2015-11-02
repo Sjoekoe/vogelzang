@@ -1,3 +1,6 @@
 composer:
   mode: always
   method: install
+
+post-deploy:
+  script: php artisan migrate
