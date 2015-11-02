@@ -1,14 +1,29 @@
 <?php
+namespace Vogelzang\Models;
 
-class Item extends \Eloquent {
-	protected $fillable = ['title', 'message', 'user_id'];
+use Illuminate\Database\Eloquent\Model;
+use Vogelzang\User;
 
-	public function user() {
-		return $this->belongsTo('User');
-	}
+class Item extends Model
+{
+    /**
+     * @var array
+     */
+    protected $fillable = ['title', 'message', 'user_id'];
 
-	public function itemphoto() {
-		return $this->hasMany('Itemphoto', 'item_id', 'id');
-	}
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function itemphoto()
+    {
+        return $this->hasMany(Itemphoto::class);
+    }
 }

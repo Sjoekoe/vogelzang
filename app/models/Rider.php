@@ -1,6 +1,10 @@
 <?php
+namespace Vogelzang\Models;
 
-class Rider extends \Eloquent
+use Illuminate\Database\Eloquent\Model;
+use Vogelzang\User;
+
+class Rider extends Model
 {
     /**
      * @var array
@@ -8,21 +12,27 @@ class Rider extends \Eloquent
     protected $fillable = ['firstname', 'lastname', 'user_id'];
 
     /**
-     * @return \User
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {
-        return $this->belongsTo('User', 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function subscriptions()
     {
-        return $this->hasMany('Subscription');
+        return $this->hasMany(Subscription::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function lessons()
     {
-        return $this->hasMany('Lesson');
+        return $this->hasMany(Lesson::class);
     }
 
     /**
@@ -34,7 +44,7 @@ class Rider extends \Eloquent
     }
 
     /**
-     * @param \Roster $roster
+     * @param \Vogelzang\Models\Roster $roster
      * @return bool
      */
     public function hasNoLessonForRoster(Roster $roster)
@@ -48,6 +58,10 @@ class Rider extends \Eloquent
         return true;
     }
 
+    /**
+     * @param \Vogelzang\Models\Roster $roster
+     * @return bool
+     */
     public function hasNoSubscriptionForRoster(Roster $roster)
     {
         foreach ($this->subscriptions as $subscription) {

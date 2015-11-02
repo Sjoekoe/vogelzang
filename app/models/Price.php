@@ -1,7 +1,8 @@
-<?php 
+<?php
+namespace Vogelzang\Models;
 
-class Price extends Eloquent {
-	
+use Illuminate\Database\Eloquent\Model;
+
+class Price extends Model
+{
 }
-
- ?>

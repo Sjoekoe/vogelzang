@@ -1,6 +1,9 @@
 <?php
+namespace Vogelzang\Models;
 
-class Pony extends \Eloquent
+use Illuminate\Database\Eloquent\Model;
+
+class Pony extends Model
 {
     /**
      * @var string
@@ -12,8 +15,11 @@ class Pony extends \Eloquent
      */
     protected $fillable = ['name'];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function lessons()
     {
-        return $this->hasMany('Lesson');
+        return $this->hasMany(Lesson::class);
     }
 }

@@ -1,7 +1,12 @@
-<?php 
+<?php
+namespace Vogelzang\Models;
 
-class Itemphoto extends Eloquent {
-	protected $fillable = ['item_id', 'path'];
+use Illuminate\Database\Eloquent\Model;
+
+class Itemphoto extends Model
+{
+    /**
+     * @var array
+     */
+    protected $fillable = ['item_id', 'path'];
 }
-
- ?>

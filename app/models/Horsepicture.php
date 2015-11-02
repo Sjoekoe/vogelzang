@@ -1,11 +1,20 @@
-<?php 
+<?php
+namespace Vogelzang\Models;
 
-class Horsepicture extends Eloquent {
-	protected $fillable = ['horse_id', 'path'];
+use Illuminate\Database\Eloquent\Model;
 
-	public function horse() {
-		return $this->belongsTo('Horse', 'id', 'horse_id');
-	}
+class Horsepicture extends Model
+{
+    /**
+     * @var array
+     */
+    protected $fillable = ['horse_id', 'path'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function horse()
+    {
+        return $this->belongsTo(Horse::class, 'id', 'horse_id');
+    }
 }
-
- ?>

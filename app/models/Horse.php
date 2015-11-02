@@ -1,17 +1,36 @@
 <?php
+namespace Vogelzang\Models;
 
-class Horse extends \Eloquent {
-	protected $fillable = ['name', 'breed', 'age', 'gender_id', 'price_id', 'description'];
+use Illuminate\Database\Eloquent\Model;
 
-	public function gender() {
-		return $this->hasOne('Gender', 'id', 'gender_id');
-	}
+class Horse extends Model
+{
+    /**
+     * @var array
+     */
+    protected $fillable = ['name', 'breed', 'age', 'gender_id', 'price_id', 'description'];
 
-	public function price() {
-		return $this->hasOne('Price', 'id', 'price_id');
-	}
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function gender()
+    {
+        return $this->hasOne(Gender::class, 'id', 'gender_id');
+    }
 
-	public function horsepicture() {
-		return $this->hasMany('Horsepicture', 'horse_id', 'id');
-	}
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function price()
+    {
+        return $this->hasOne(Price::class, 'id', 'price_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function horsepicture()
+    {
+        return $this->hasMany(Horsepicture::class);
+    }
 }

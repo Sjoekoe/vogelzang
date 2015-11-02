@@ -1,8 +1,10 @@
 <?php
+namespace Vogelzang\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
-class Roster extends \Eloquent
+class Roster extends Model
 {
     /**
      * @var array
@@ -10,16 +12,19 @@ class Roster extends \Eloquent
     protected $fillable = ['date', 'type', 'name', 'description', 'hour', 'limit'];
 
     /**
-     * @return Subscription[]
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function subscriptions()
     {
-        return $this->hasMany('Subscription', 'roster_id', 'id');
+        return $this->hasMany(Subscription::class, 'roster_id', 'id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function lessons()
     {
-        return $this->hasMany('Lesson');
+        return $this->hasMany(Lesson::class);
     }
 
     /**
@@ -35,8 +40,7 @@ class Roster extends \Eloquent
      */
     public function canStillBeCanceled()
     {
-        $hour = explode(':', Lang::get('days.hours')[$this->hour]);
-
+        $hour = Explode(':', trans('days.hours')[$this->hour]);
         $parsedDate = strtotime($this->date);
 
         $lessonHour = Carbon::createFromDate(date('Y', $parsedDate), date('m', $parsedDate), date('d', $parsedDate))
