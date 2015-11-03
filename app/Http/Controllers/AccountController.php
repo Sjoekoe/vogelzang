@@ -36,7 +36,7 @@ class AccountController extends Controller
         $email = $request->get('email');
         $username = $request->get('username');
         $code = str_random(60);
-        $password = str_random(10);
+        $password = 'vogelzang';
 
         $user = User::create([
             'email' => $email,
