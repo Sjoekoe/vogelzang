@@ -30,16 +30,15 @@ class DashboardController extends Controller
 
         $yesterday = $this->getYesterday();
 
-        return [];
         foreach (auth()->user()->riders as $rider) {
             $lessons = Subscription::where('subscriptions.rider_id', $rider->id)
-                ->join('rosters', 'roster.id', '=', 'subscriptions.roster_id')
+                ->join('rosters', 'rosters.id', '=', 'subscriptions.roster_id')
                 ->where('rosters.date', '>', $yesterday)
                 ->orderBy('rosters.date')
                 ->get();
 
             foreach ($lessons as $lesson) {
-                $result[$rider->fullName][] = [
+                $result[$rider->fullName()][] = [
                    'roster' => trans('days.names')[$lesson->roster->name] . ' ' . date('d/m/Y', strtotime($lesson->roster->date)) . ' - ' . trans('days.hours')[$lesson->roster->hour] . ' (' . trans('rosters')[$lesson->roster->type] . ')',
                 ];
             }
