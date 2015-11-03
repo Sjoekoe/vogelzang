@@ -35,9 +35,9 @@
                     @foreach ($riders as $rider)
                         <tr>
                             <td>
-                                {{--@if ($rider->hasNoTurnsLeft())
+                                @if ($rider->hasNoTurnsLeft())
                                     <span class="glyphicon glyphicon-warning-sign"></span>
-                                @endif--}}
+                                @endif
                             </td>
                             <td> {{ $rider->firstname . ' ' . $rider->lastname }} </td>
                             <td>{{ $rider->turns }}</td>

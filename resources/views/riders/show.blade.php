@@ -12,11 +12,11 @@
             <h3>{{ $rider->fullName() }}</h3>
             <div class="overview">
                 <p>Resterende beurten : {{ $rider->turns }}
-                    {{--@if ($rider->hasNoTurnsLeft())
+                    @if ($rider->hasNoTurnsLeft())
                         (Gelieve zo snel mogelijk uw lesbeurten te betalen!)
-                    @endif--}}
+                    @endif
                 </p>
-                <p>Toekomstig ingeschreven lessen : {{--{{ $rider->futureLessonsCount() }}--}}</p>
+                <p>Toekomstig ingeschreven lessen : {{ $rider->futureLessonsCount() }}</p>
                 <hr/>
             </div>
         </div>

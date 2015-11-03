@@ -35,9 +35,9 @@
                                     @if (Auth::user()->isAdmin() || $subscription->rider->user->id == Auth::user()->id)
                                         <tr>
                                             <td>
-                                                {{--@if ($subscription->rider()->hasNoTurnsLeft())
+                                                @if ($subscription->rider->hasNoTurnsLeft())
                                                     <span class="glyphicon glyphicon-warning-sign"></span>
-                                                @endif--}}
+                                                @endif
                                             </td>
                                             <td>{{ $subscription->rider->fullName() }}</td>
                                             <td>
