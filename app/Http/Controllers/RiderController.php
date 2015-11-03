@@ -48,6 +48,15 @@ class RiderController extends Controller
      * @param \Vogelzang\Models\Rider $rider
      * @return \Illuminate\View\View
      */
+    public function show(Rider $rider)
+    {
+        return view('riders.show', compact('rider'));
+    }
+
+    /**
+     * @param \Vogelzang\Models\Rider $rider
+     * @return \Illuminate\View\View
+     */
     public function edit(Rider $rider)
     {
         $this->initRider($rider);
@@ -66,6 +75,11 @@ class RiderController extends Controller
 
         $rider->firstname = $request->get('firstname');
         $rider->lastname = $request->get('lastname');
+
+        if ($request->has('turns')) {
+            $rider->turns = $request->get('turns');
+        }
+
         $rider->save();
 
         return redirect()->route('riders.index')->with('global', 'Ruiter is aangemaakt');

@@ -19,20 +19,32 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>Ruiter</th>
+                                <th></th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
-                                <td colspan="3">  </td>
+                                <td colspan="4">  </td>
                             </tr>
                             </tfoot>
                             <tbody>
                                 @foreach ($roster->subscriptions as $subscription)
                                     @if (Auth::user()->isAdmin() || $subscription->rider->user->id == Auth::user()->id)
                                         <tr>
+                                            <td>
+                                                @if ($subscription->rider->hasNoTurnsLeft())
+                                                    <span class="glyphicon glyphicon-warning-sign"></span>
+                                                @endif
+                                            </td>
                                             <td>{{ $subscription->rider->fullName() }}</td>
+                                            <td>
+                                                <a href="{{ route('rider.show', $subscription->rider->id) }}">
+                                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                                </a>
+                                            </td>
                                             <td>
                                                 @if ($roster->canStillBeCanceled())
                                                     <a href="{{ route('subscription.delete', $subscription->id) }}">
@@ -40,7 +52,6 @@
                                                     </a>
                                                 @endif
                                             </td>
-
                                         </tr>
                                     @endif
                                 @endforeach

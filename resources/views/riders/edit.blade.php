@@ -23,6 +23,14 @@
                 <span> {{ $errors->first('lastname') }} </span>
             @endif
         </div>
+
+        @if (auth()->user()->isAdmin())
+            <div class="form-group">
+                {{ Form::label('turns', 'Beurten') }}
+                {{ Form::text('turns', $rider->turns, ['class' => 'form-control']) }}
+            </div>
+        @endif
+
         <!-- Submit button -->
         <div class="form-group">
             {{ Form::submit('Opslaan', ['class' => 'btn btn-custom']) }}

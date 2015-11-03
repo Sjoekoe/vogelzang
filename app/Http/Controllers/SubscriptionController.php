@@ -2,6 +2,7 @@
 namespace Vogelzang\Http\Controllers;
 
 use Input;
+use Vogelzang\Models\Rider;
 use Vogelzang\Models\Roster;
 use Vogelzang\Models\Subscription;
 
@@ -21,6 +22,11 @@ class SubscriptionController extends Controller
                     'roster_id' => $roster->id,
                     'rider_id' => $rider,
                 ]);
+
+                $rider = $this->initRider($rider);
+
+                $rider->deductTurn();
+                $rider->save();
 
                 $count ++;
             } else {
@@ -43,6 +49,10 @@ class SubscriptionController extends Controller
             return redirect()->route('roster.show', $rosterId)->with('global', 'Je kan je niet meer uitschrijven voor deze les.');
         }
 
+        $rider = $this->initRider($subscription->rider->id);
+        $rider->addTurns(1);
+        $rider->save();
+
         if ($subscription->lesson()) {
             $subscription->lesson()->delete();
         }
@@ -50,5 +60,14 @@ class SubscriptionController extends Controller
         $subscription->delete();
 
         return redirect()->route('roster.show', $rosterId)->with('global', 'Uitgeschreven');
+    }
+
+    /**
+     * @param int $id
+     * @return \Vogelzang\Models\Rider
+     */
+    private function initRider($id)
+    {
+        return Rider::find($id);
     }
 }

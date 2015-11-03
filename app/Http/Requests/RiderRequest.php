@@ -19,6 +19,7 @@ class RiderRequest extends Request
         return [
             'firstname' => 'required',
             'lastname' => 'required',
+            'turns' => 'integer',
         ];
     }
 }

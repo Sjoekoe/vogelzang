@@ -15,7 +15,8 @@
                 <tr>
                     <th></th>
                     <th>Naam</th>
-                    <th colspan="2">
+                    <th>Resterende beurten</th>
+                    <th colspan="3">
                         @if (Auth::user()->isAdmin())
                             {{ $riderCount . ' ruiters' }}
                         @endif
@@ -24,7 +25,7 @@
                 </thead>
                 <tfoot>
                 <tr>
-                    <td colspan="4">
+                    <td colspan="6">
                         @include('pagination.mine', ['paginator' => $riders])
                     </td>
                 </tr>
@@ -33,8 +34,14 @@
                 @if (count($riders))
                     @foreach ($riders as $rider)
                         <tr>
-                            <td></td>
+                            <td>
+                                @if ($rider->hasNoTurnsLeft())
+                                    <span class="glyphicon glyphicon-warning-sign"></span>
+                                @endif
+                            </td>
                             <td> {{ $rider->firstname . ' ' . $rider->lastname }} </td>
+                            <td>{{ $rider->turns }}</td>
+                            <td><a href="{{ route('rider.show', $rider->id) }}"> <span class="glyphicon glyphicon-eye-open"></span></a></td>
                             <td> <a href="{{ route('rider.edit', $rider->id) }}"> <span class="glyphicon glyphicon-pencil"></span> </a> </td>
                             <td> <a href="{{ route('rider.delete', $rider->id) }}"> <span class="glyphicon glyphicon-trash"></span> </a> </td>
                         </tr>

@@ -88,6 +88,7 @@ Route::group(['middleware' => 'auth'], function() {
     get('/dashboard', ['as' => 'dashboard.index', 'uses' => 'DashboardController@index']);
     get('/riders/index', ['as' => 'riders.index', 'uses' => 'RiderController@index']);
     get('/riders/create', ['as' => 'rider.create', 'uses' => 'RiderController@create']);
+    get('/riders/show/{rider}', ['as' => 'rider.show', 'uses' => 'RiderController@show']);
     get('/riders/edit/{rider}', ['as' => 'rider.edit', 'uses' => 'RiderController@edit']);
     get('/riders/delete{rider}', ['as' => 'rider.delete', 'uses' => 'RiderController@delete']);
     get('/subscription/delete/{subscription}', ['as' => 'subscription.delete', 'uses' => 'SubscriptionController@delete']);
