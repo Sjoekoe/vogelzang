@@ -34,11 +34,11 @@ class SendNewsletter extends Job implements SelfHandling, ShouldQueue
      */
     public function handle(Mailer $mail)
     {
-        $emails = ['jonckershans@gmail.com'];
+        $emails = [];
 
-        /*foreach (User::all() as $user) {
+        foreach (User::all() as $user) {
             array_push($emails, $user->email);
-        }*/
+        }
 
         $body = $this->body;
         $subject = $this->subject;
