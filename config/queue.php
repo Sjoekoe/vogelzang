@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('QUEUE_DRIVER', 'sync'),
+    'default' => env('QUEUE_DRIVER', 'iron'),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,10 +59,10 @@ return [
 
         'iron' => [
             'driver'  => 'iron',
-            'host'    => 'mq-aws-us-east-1.iron.io',
-            'token'   => 'your-token',
-            'project' => 'your-project-id',
-            'queue'   => 'your-queue-name',
+            'host'    => 'mq-aws-eu-west-1-1.iron.io',
+            'token'   => 'Bq1mWJ4ReZGfJADIdzFMfr3efls',
+            'project' => '567565164288760009000029',
+            'queue'   => 'vogelzang',
             'encrypt' => true,
         ],
 

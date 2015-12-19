@@ -46,5 +46,10 @@
                 <span class="glyphicon glyphicon-font"></span> Ruiters
             </a>
         </li>
+        <li>
+            <a href="{{ route('newsletter.index') }}">
+                <span class="glyphicon glyphicon-comment"></span> Nieuwsbrief
+            </a>
+        </li>
     </ul>
 </div> <!-- End col-md-2 quicknav -->

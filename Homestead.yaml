@@ -1,6 +1,6 @@
 ---
-#ip: "192.168.56.101"
-ip: "192.168.10.10"
+ip: "192.168.56.101"
+#ip: "192.168.10.10"
 memory: 2048
 cpus: 1
 hostname: vogelzang
@@ -17,7 +17,7 @@ folders:
       to: "/home/vagrant/vogelzang"
 
 sites:
-    - map: homestead.app
+    - map: vogelzang.app
       to: "/home/vagrant/vogelzang/public"
 
 databases:

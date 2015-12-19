@@ -70,6 +70,8 @@ Route::group(['middleware' => 'auth'], function() {
 
         get('lesson/delete/{lesson}', ['as' => 'lesson.delete', 'uses' => 'LessonController@delete']);
 
+        get('admin/newsletter', ['as' => 'newsletter.index', 'uses' => 'NewsLetterController@index']);
+        post('admin/newsletter', ['as' => 'newsletter.send', 'uses' => 'NewsLetterController@send']);
     });
 
     patch('/user/edit/{user}', ['as' => 'user.update', 'uses' => 'UserController@update']);
