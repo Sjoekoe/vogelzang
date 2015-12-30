@@ -3,7 +3,6 @@
 namespace Vogelzang\Jobs;
 
 use Illuminate\Contracts\Mail\Mailer;
-use Vogelzang\Jobs\Job;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;
@@ -36,10 +35,10 @@ class SendNewsletter extends Job implements SelfHandling, ShouldQueue
     {
         $emails = [];
 
-        foreach (User::all() as $user) {
+        foreach (User::where('id', '>',  78)->where('id', '<', 128)->get() as $user) {
             array_push($emails, $user->email);
         }
-
+dd($emails);
         $body = $this->body;
         $subject = $this->subject;
 
