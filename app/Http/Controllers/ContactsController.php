@@ -36,7 +36,7 @@ class ContactsController extends Controller
             'full_name' => $request->get('full_name'),
             'subject' => $request->get('subject'),
             'email' => $request->get('email'),
-            'q' => $request->get('q'),
+            'message' => $request->get('q'),
             'name' => $request->get('name'),
         ];
 
