@@ -35,7 +35,7 @@ class SendNewsletter extends Job implements SelfHandling, ShouldQueue
     {
         $emails = [];
 
-        foreach (User::where('id', '>',  78)->where('id', '<', 128)->get() as $user) {
+        foreach (User::where('id', '>',  127)->get() as $user) {
             array_push($emails, $user->email);
         }
 
