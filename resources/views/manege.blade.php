@@ -16,13 +16,13 @@
 						<h3 class="underlined">Prijzen</h3>
 						<ul class="accomodation">
 							<li>
-								€12 per les met manegepony
+								€16 per les met manegepony
 							</li>
 							<li>
 								€10 per les met eigen pony/paard
 							</li>
 							<li>
-								€100 voor een 10-beurtenkaart
+								€130 voor een 10-beurtenkaart
 							</li>
 							<li>
 								€20 per prive les per 1/2 uur
@@ -38,14 +38,8 @@
 							Contacteer ons om in te schrijven, of kom gerust eens langs.</p> <br>
 						<h3 class="underlined">Data 2015</h3>
 						<ul class="accomodation">
-							<li>16 Februari - 22 Februari</li>
-							<li>13 April - 17 April (Cool For Kids &amp; de Vogelzang)</li>
-							<li>1 Juli - 3 Juli (de Vogelzang)</li>
-							<li>6 Juli - 10 Juli (de Vogelzang)</li>
-							<li>13 Juli - 17 Juli (Stad Lokeren)</li>
-							<li>10 Augustus - 14 Augustus (Stad Lokeren)</li>
-							<li>17 Augustus - 21 Augustus (Stad Lokeren)</li>
-							<li>24 Augustus - 28 Augustus (Cool For Kids)</li>
+							<li>08 Februari - 12 Februari</li>
+							<li>04 April - 08 April</li>
 						</ul>
 					</div>
 				</div>
