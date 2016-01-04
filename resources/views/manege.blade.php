@@ -36,7 +36,7 @@
 							Er bestaat ook de mogelijkheid om te overnachten, en ook eten is voorzien.</p>
 						<p class="small">De plaatsen voor deze kampen zijn beperkt, dus snel zijn is de boodschap. <br>
 							Contacteer ons om in te schrijven, of kom gerust eens langs.</p> <br>
-						<h3 class="underlined">Data 2015</h3>
+						<h3 class="underlined">Data 2016</h3>
 						<ul class="accomodation">
 							<li>08 Februari - 12 Februari</li>
 							<li>04 April - 08 April</li>
