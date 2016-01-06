@@ -141,16 +141,21 @@ class UserController extends Controller
         return redirect()->route('home')->with('global', 'Je bent uitgelogd.');
     }
 
+    public function recoverPassword()
+    {
+        return view('users.forgot')->with('title', 'Herstel wachtwoord');
+    }
+
     /**
      * @param \Vogelzang\Http\Requests\RecoverPasswordRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function recoverPassword(RecoverPasswordRequest $request)
+    public function postRecoverPassword(RecoverPasswordRequest $request)
     {
         $user = User::where('email', $request->get('email'))->firtsOrFail();
 
         $code = str_random(60);
-        $password = str_random(10);
+        $password = 'vogelzang';
 
         $user->code = $code;
         $user->password_temp = Hash::make($password);

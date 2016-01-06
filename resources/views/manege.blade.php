@@ -19,9 +19,6 @@
 								€16 per les met manegepony
 							</li>
 							<li>
-								€10 per les met eigen pony/paard
-							</li>
-							<li>
 								€130 voor een 10-beurtenkaart
 							</li>
 							<li>
