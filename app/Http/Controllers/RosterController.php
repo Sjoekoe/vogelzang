@@ -15,7 +15,7 @@ class RosterController extends Controller
     public function index()
     {
         $today = Carbon::now()->startOfDay();
-        $future = Carbon::now()->addWeeks(2);
+        $future = Carbon::now()->addWeeks(4);
 
         if (auth()->user()->isAdmin()) {
             $rosters = Roster::where('date', '>', $today)
