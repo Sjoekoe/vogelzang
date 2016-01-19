@@ -10,6 +10,7 @@ use Vogelzang\Models\Horsepicture;
 use Vogelzang\Models\Item;
 use Vogelzang\Models\Itemphoto;
 use Vogelzang\Models\Lesson;
+use Vogelzang\Models\Pony;
 use Vogelzang\Models\Rider;
 use Vogelzang\Models\Roster;
 use Vogelzang\Models\Subscription;
