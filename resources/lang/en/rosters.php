@@ -7,5 +7,6 @@ return [
     4 => 'Springles',
     5 => 'Wandeling',
     6 => 'Dressuurles',
+    7 => 'Groepsles voor gevorderden',
     7 => 'Springles voor gevorderden',
 ];
